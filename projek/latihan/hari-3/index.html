@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeoLapor — Latihan Hari 3</title>
+
+    <!-- Leaflet CSS: CDN dahulu; jika gagal dimuat (luar talian) tukar ke salinan tempatan. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+      onerror="this.onerror = null; this.removeAttribute('integrity'); this.href = 'vendor/leaflet/leaflet.css';"
+    />
+    <link rel="stylesheet" href="gaya.css" />
+  </head>
+  <body>
+    <header class="kepala">
+      <h1>GeoLapor <small>Hari 3 · tanpa build</small></h1>
+      <nav id="nav-latihan" aria-label="Pilih latihan">
+        <a href="?l=01">01 Pilih</a>
+        <a href="?l=02">02 Render</a>
+        <a href="?l=03">03 Peta</a>
+        <a href="?l=04">04 Event</a>
+        <a href="?l=05">05 Borang</a>
+      </nav>
+      <span id="status-api" class="lencana" title="Status mock API">API …</span>
+    </header>
+
+    <p id="info-latihan" class="info" role="status"></p>
+
+    <main class="susun">
+      <!-- Panel kiri: tapisan + senarai -->
+      <aside class="panel" id="panel-senarai" aria-label="Senarai laporan">
+        <section id="tapisan" class="tapisan" aria-label="Tapisan">
+          <label>
+            Cari tajuk
+            <input type="search" id="carian" name="q" placeholder="cth: papan" autocomplete="off" />
+          </label>
+          <label>
+            Kategori
+            <select id="tapis-kategori" name="kategori">
+              <option value="">Semua kategori</option>
+            </select>
+          </label>
+          <label>
+            Status
+            <select id="tapis-status" name="status">
+              <option value="">Semua status</option>
+              <option value="baharu">Baharu</option>
+              <option value="dalam-tindakan">Dalam tindakan</option>
+              <option value="selesai">Selesai</option>
+              <option value="ditolak">Ditolak</option>
+            </select>
+          </label>
+          <p id="kiraan" class="kiraan" aria-live="polite"></p>
+        </section>
+
+        <ul id="senarai-laporan" class="senarai"></ul>
+
+        <!-- Templat kad laporan: diklon oleh JS, diisi dengan textContent (selamat). -->
+        <template id="tpl-laporan">
+          <li class="kad" data-id="">
+            <h3 class="kad-tajuk"></h3>
+            <p class="kad-meta">
+              <span class="lencana kad-kategori"></span>
+              <span class="lencana kad-status"></span>
+            </p>
+            <p class="kad-koordinat"></p>
+            <div class="kad-tindakan">
+              <button type="button" data-tindakan="zum">Zum</button>
+              <button type="button" data-tindakan="padam" class="bahaya">Padam</button>
+            </div>
+          </li>
+        </template>
+      </aside>
+
+      <!-- Tengah: peta -->
+      <section class="peta-bekas" aria-label="Peta">
+        <div id="peta" role="region" aria-label="Peta laporan"></div>
+      </section>
+
+      <!-- Panel kanan: borang laporan baharu -->
+      <aside class="panel" aria-label="Laporan baharu">
+        <form id="borang-laporan" novalidate>
+          <h2>Laporan baharu</h2>
+
+          <label for="f-tajuk">Tajuk</label>
+          <input id="f-tajuk" name="tajuk" required minlength="5" maxlength="120" />
+          <p class="ralat" data-ralat-untuk="tajuk" aria-live="polite"></p>
+
+          <label for="f-kategori">Kategori</label>
+          <select id="f-kategori" name="kategori" required>
+            <option value="">— pilih —</option>
+          </select>
+          <p class="ralat" data-ralat-untuk="kategori" aria-live="polite"></p>
+
+          <label for="f-catatan">Catatan</label>
+          <textarea id="f-catatan" name="catatan" rows="3" maxlength="500"></textarea>
+          <p class="ralat" data-ralat-untuk="catatan" aria-live="polite"></p>
+
+          <fieldset>
+            <legend>Lokasi — klik pada peta</legend>
+            <label for="f-lat">Lat</label>
+            <input id="f-lat" name="lat" type="number" step="any" min="0.8" max="7.5" required />
+            <p class="ralat" data-ralat-untuk="lat" aria-live="polite"></p>
+            <label for="f-lng">Lng</label>
+            <input id="f-lng" name="lng" type="number" step="any" min="99.5" max="119.5" required />
+            <p class="ralat" data-ralat-untuk="lng" aria-live="polite"></p>
+          </fieldset>
+
+          <button type="submit">Hantar laporan</button>
+          <p id="mesej-borang" class="mesej" role="status"></p>
+        </form>
+      </aside>
+    </main>
+
+    <footer class="kaki">
+      Data sintetik untuk latihan · Peta © penyumbang OpenStreetMap · Buka DevTools (F12) → Console untuk semakan ✅/❌
+    </footer>
+
+    <script type="module" src="muat.js"></script>
+  </body>
+</html>

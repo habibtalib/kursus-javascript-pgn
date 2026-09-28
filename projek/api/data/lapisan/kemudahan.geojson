@@ -1,0 +1,197 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "KMD-01",
+      "properties": {
+        "kod": "KMD-01",
+        "nama": "Sekolah Kebangsaan Latihan 1",
+        "jenis": "sekolah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.73428,
+          2.93619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-02",
+      "properties": {
+        "kod": "KMD-02",
+        "nama": "Sekolah Menengah Latihan 2",
+        "jenis": "sekolah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.71091,
+          2.90845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-03",
+      "properties": {
+        "kod": "KMD-03",
+        "nama": "Klinik Kesihatan Latihan",
+        "jenis": "klinik"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.70865,
+          2.92067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-04",
+      "properties": {
+        "kod": "KMD-04",
+        "nama": "Klinik Komuniti Presint",
+        "jenis": "klinik"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.72026,
+          2.93167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-05",
+      "properties": {
+        "kod": "KMD-05",
+        "nama": "Balai Polis Latihan",
+        "jenis": "balai-polis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.70143,
+          2.89475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-06",
+      "properties": {
+        "kod": "KMD-06",
+        "nama": "Masjid Latihan Presint",
+        "jenis": "masjid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.67128,
+          2.94378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-07",
+      "properties": {
+        "kod": "KMD-07",
+        "nama": "Surau Taman Latihan",
+        "jenis": "masjid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.70353,
+          2.92959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-08",
+      "properties": {
+        "kod": "KMD-08",
+        "nama": "Taman Rekreasi Tasik Latihan",
+        "jenis": "taman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7104,
+          2.96068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-09",
+      "properties": {
+        "kod": "KMD-09",
+        "nama": "Taman Permainan Presint",
+        "jenis": "taman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.68273,
+          2.9636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-10",
+      "properties": {
+        "kod": "KMD-10",
+        "nama": "Perpustakaan Awam Latihan",
+        "jenis": "perpustakaan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.67465,
+          2.89107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-11",
+      "properties": {
+        "kod": "KMD-11",
+        "nama": "Balai Bomba Latihan",
+        "jenis": "bomba"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.73345,
+          2.91577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "KMD-12",
+      "properties": {
+        "kod": "KMD-12",
+        "nama": "Dewan Serbaguna Latihan",
+        "jenis": "dewan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.72524,
+          2.9317
+        ]
+      }
+    }
+  ]
+}

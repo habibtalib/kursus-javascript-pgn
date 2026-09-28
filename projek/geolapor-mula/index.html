@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GeoLapor — sistem laporan tapak geospatial (data sintetik latihan)" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📍</text></svg>"
+    />
+    <title>GeoLapor — Laporan Tapak Geospatial</title>
+  </head>
+  <body>
+    <header class="kepala">
+      <h1>GeoLapor</h1>
+      <span class="subtajuk">Sistem Laporan Tapak Geospatial · data sintetik latihan</span>
+      <span id="status-api" class="lencana" role="status">API: menyemak…</span>
+    </header>
+
+    <main class="susun">
+      <aside class="sisi">
+        <!-- Tapisan -->
+        <section class="panel" aria-labelledby="t-penapis">
+          <h2 id="t-penapis">Tapisan</h2>
+          <form id="penapis" class="borang-penapis">
+            <label>
+              Kategori
+              <select name="kategori">
+                <option value="">Semua kategori</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option value="">Semua status</option>
+                <option value="baharu">baharu</option>
+                <option value="dalam-tindakan">dalam-tindakan</option>
+                <option value="selesai">selesai</option>
+                <option value="ditolak">ditolak</option>
+              </select>
+            </label>
+            <label class="penuh">
+              Cari tajuk
+              <input name="q" type="search" placeholder="cth: sungai" autocomplete="off" />
+            </label>
+            <button type="reset" class="butang-kecil">Set semula</button>
+          </form>
+        </section>
+
+        <!-- Senarai laporan -->
+        <section class="panel" aria-labelledby="t-senarai">
+          <h2 id="t-senarai">
+            Laporan
+            <button id="butang-zum-semua" type="button" class="butang-kecil">Zum semua</button>
+          </h2>
+          <p id="senarai-status" class="status" role="status" aria-live="polite"></p>
+          <ul id="senarai" class="senarai"></ul>
+        </section>
+
+        <!-- Borang laporan baharu -->
+        <details id="panel-borang" class="panel">
+          <summary>Laporan baharu</summary>
+          <form id="borang" novalidate>
+            <label>
+              Tajuk
+              <input name="tajuk" type="text" maxlength="120" required placeholder="5–120 aksara" />
+            </label>
+            <p class="ralat-medan" data-ralat="tajuk"></p>
+
+            <label>
+              Kategori
+              <select name="kategori" required>
+                <option value="">— pilih —</option>
+              </select>
+            </label>
+            <p class="ralat-medan" data-ralat="kategori"></p>
+
+            <label>
+              Catatan
+              <textarea
+                name="catatan"
+                rows="2"
+                maxlength="500"
+                placeholder="Pilihan, maks 500 aksara"
+              ></textarea>
+            </label>
+            <p class="ralat-medan" data-ralat="catatan"></p>
+
+            <div class="dua-lajur">
+              <label>
+                Latitud
+                <input name="lat" type="number" step="any" placeholder="2.92640" />
+              </label>
+              <label>
+                Longitud
+                <input name="lng" type="number" step="any" placeholder="101.69580" />
+              </label>
+            </div>
+            <p class="ralat-medan" data-ralat="lat"></p>
+            <p class="ralat-medan" data-ralat="lng"></p>
+            <p class="petunjuk">💡 Klik pada peta untuk mengisi latitud & longitud.</p>
+
+            <p class="ralat-medan" data-ralat="_umum"></p>
+            <div class="butang-kumpulan">
+              <button type="submit">Hantar laporan</button>
+              <button type="reset" class="sekunder">Kosongkan</button>
+            </div>
+          </form>
+        </details>
+
+        <!-- Lapisan rujukan -->
+        <details class="panel">
+          <summary>Lapisan rujukan</summary>
+          <div id="senarai-lapisan"><p class="status">Memuat senarai lapisan…</p></div>
+          <button id="butang-kosong-cache" type="button" class="butang-kecil">Kosongkan cache lapisan</button>
+        </details>
+
+        <!-- Import / eksport -->
+        <details id="panel-fail" class="panel">
+          <summary>Fail geospatial (import / eksport)</summary>
+          <label>
+            Import fail (.geojson .zip .gpkg .kml .kmz .tif .las)
+            <input
+              name="fail"
+              type="file"
+              multiple
+              accept=".geojson,.json,.zip,.gpkg,.kml,.kmz,.tif,.tiff,.las"
+            />
+          </label>
+          <div class="baris">
+            <select name="sampel" aria-label="Fail sampel dari pelayan">
+              <option value="sempadan-zon-rso.zip">sempadan-zon-rso.zip (Shapefile, EPSG:3375)</option>
+              <option value="sungai.geojson">sungai.geojson</option>
+              <option value="kemudahan.gpkg">kemudahan.gpkg (GeoPackage)</option>
+              <option value="kemudahan.kml">kemudahan.kml</option>
+              <option value="kemudahan.kmz">kemudahan.kmz</option>
+              <option value="dem-putrajaya.tif">dem-putrajaya.tif (GeoTIFF)</option>
+              <option value="sampel.las">sampel.las (LAS 1.2)</option>
+            </select>
+            <button type="button" class="butang-kecil" data-muat-sampel>Muat sampel</button>
+          </div>
+          <ul class="senarai-import"></ul>
+          <div class="maklumat"></div>
+          <div class="butang-kumpulan">
+            <span>Eksport laporan dipapar:</span>
+            <button type="button" class="butang-kecil" data-eksport="geojson">GeoJSON</button>
+            <button type="button" class="butang-kecil" data-eksport="kml">KML</button>
+            <button type="button" class="butang-kecil" data-eksport="shp">Shapefile</button>
+          </div>
+        </details>
+
+        <!-- Analisis Turf -->
+        <details id="panel-analisis" class="panel">
+          <summary>Analisis ruang (Turf.js)</summary>
+          <button type="button" class="butang-kecil" data-kira-zon>Kira laporan per zon</button>
+          <table class="jadual"></table>
+          <div class="baris">
+            <label>
+              Jejari (km)
+              <input name="km" type="number" value="0.5" step="0.1" min="0.1" max="10" />
+            </label>
+            <button type="button" class="butang-kecil" data-penampan>Penampan laporan dipilih</button>
+            <button type="button" class="butang-kecil" data-buang-penampan>Buang</button>
+          </div>
+          <p class="status hasil-penampan"></p>
+        </details>
+
+        <!-- Statistik -->
+        <details class="panel" open>
+          <summary>Statistik</summary>
+          <div id="statistik"></div>
+        </details>
+      </aside>
+
+      <section class="peta-bekas" aria-label="Peta">
+        <div id="peta"></div>
+        <div id="amaran-luar-talian" class="amaran" hidden>
+          Jubin peta OpenStreetMap tidak dapat dimuat (tiada internet?). Lapisan data & laporan tetap
+          berfungsi dengan mock API tempatan.
+        </div>
+        <div id="penunjuk-muat" class="penunjuk" hidden>Memuat…</div>
+      </section>
+    </main>
+
+    <div id="notis" class="notis" aria-live="polite" hidden></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

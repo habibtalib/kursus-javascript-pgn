@@ -1,0 +1,9 @@
+{
+  "name": "latihan-hari-2",
+  "private": true,
+  "type": "module",
+  "description": "Latihan Hari 2 — JS PGN. Mock API mesti berjalan: cd ../../api && npm start",
+  "scripts": {
+    "semak": "node semak.js"
+  }
+}

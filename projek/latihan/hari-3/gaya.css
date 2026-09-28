@@ -1,0 +1,86 @@
+/* gaya.css — gaya ringkas GeoLapor Hari 3 (bukan fokus kursus; jangan habiskan masa di sini). */
+:root {
+  --latar: #f5f7fa;
+  --panel: #ffffff;
+  --teks: #1f2933;
+  --kelabu: #616e7c;
+  --garis: #d9e2ec;
+  --utama: #0b6e4f;
+  --bahaya: #b42318;
+  --sorot: #fff4ce;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--teks);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--latar); }
+
+.kepala {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem;
+  padding: 0.6rem 1rem; background: var(--utama); color: #fff;
+}
+.kepala h1 { margin: 0; font-size: 1.25rem; }
+.kepala small { font-weight: 400; opacity: 0.8; }
+.kepala nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.kepala nav a { color: #fff; text-decoration: none; padding: 0.2rem 0.5rem; border-radius: 4px; }
+.kepala nav a[aria-current='page'] { background: rgb(255 255 255 / 0.25); }
+.togol { display: flex; align-items: center; gap: 0.3rem; font-size: 0.85rem; color: #fff; }
+#status-api { margin-left: auto; }
+
+.info { margin: 0; padding: 0.4rem 1rem; background: #e3f2ec; font-size: 0.9rem; }
+.info:empty { display: none; }
+
+.susun {
+  display: grid; grid-template-columns: 300px 1fr 300px; gap: 0.75rem;
+  padding: 0.75rem; height: calc(100vh - 110px); min-height: 480px;
+}
+@media (max-width: 1000px) {
+  .susun { grid-template-columns: 1fr; height: auto; }
+  #peta { height: 60vh; }
+}
+.panel {
+  background: var(--panel); border: 1px solid var(--garis); border-radius: 8px;
+  padding: 0.75rem; overflow: auto;
+}
+.peta-bekas, #peta { height: 100%; min-height: 400px; border-radius: 8px; }
+
+.tapisan { display: grid; gap: 0.5rem; margin-bottom: 0.5rem; }
+label { display: grid; gap: 0.2rem; font-size: 0.85rem; color: var(--kelabu); }
+input, select, textarea, button { font: inherit; padding: 0.35rem 0.5rem; border: 1px solid var(--garis); border-radius: 4px; }
+input:user-invalid, select:user-invalid { border-color: var(--bahaya); }
+button { cursor: pointer; background: #fff; }
+button[type='submit'] { background: var(--utama); color: #fff; border: none; width: 100%; margin-top: 0.5rem; }
+button:disabled { opacity: 0.6; cursor: progress; }
+.bahaya { color: var(--bahaya); }
+.kiraan { margin: 0; font-size: 0.85rem; color: var(--kelabu); }
+
+.senarai { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.senarai[aria-busy='true'] { opacity: 0.5; }
+.kad { border: 1px solid var(--garis); border-left: 5px solid var(--kelabu); border-radius: 6px; padding: 0.5rem 0.6rem; cursor: pointer; }
+.kad:hover, .kad.aktif { background: var(--sorot); }
+.kad h3 { margin: 0 0 0.25rem; font-size: 0.95rem; }
+.kad p { margin: 0.15rem 0; font-size: 0.8rem; color: var(--kelabu); }
+.kad-tindakan { display: flex; gap: 0.4rem; margin-top: 0.35rem; }
+.kad-tindakan button { font-size: 0.75rem; padding: 0.15rem 0.5rem; }
+.kosong { color: var(--kelabu); font-style: italic; }
+
+.lencana { display: inline-block; font-size: 0.75rem; padding: 0.05rem 0.45rem; border-radius: 999px; background: #e4e7eb; color: var(--teks); }
+.status-baharu { background: #dbeafe; }
+.status-dalam-tindakan { background: #fef3c7; }
+.status-selesai { background: #d1fae5; }
+.status-ditolak { background: #fee2e2; }
+#status-api.ok { background: #d1fae5; }
+#status-api.gagal { background: #fee2e2; }
+
+form h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+form label { margin-top: 0.4rem; }
+form input, form select, form textarea { width: 100%; }
+fieldset { border: 1px dashed var(--garis); border-radius: 6px; margin: 0.6rem 0 0; padding: 0.4rem 0.6rem; }
+legend { font-size: 0.85rem; color: var(--kelabu); }
+.ralat { margin: 0.1rem 0 0; min-height: 1em; font-size: 0.78rem; color: var(--bahaya); }
+.mesej { font-size: 0.85rem; }
+.mesej.berjaya { color: var(--utama); }
+.mesej.gagal { color: var(--bahaya); }
+
+.popup strong { display: block; margin-bottom: 0.25rem; }
+.popup p { margin: 0.15rem 0; }
+.kaki { padding: 0.25rem 1rem 0.75rem; font-size: 0.75rem; color: var(--kelabu); }

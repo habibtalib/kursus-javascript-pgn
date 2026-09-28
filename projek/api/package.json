@@ -1,0 +1,16 @@
+{
+  "name": "geolapor-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock REST API GeoLapor untuk Kursus Pengaturcaraan JavaScript (PGN) — Node built-ins sahaja",
+  "type": "module",
+  "main": "server.mjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "reset-data": "node reset-data.mjs"
+  }
+}

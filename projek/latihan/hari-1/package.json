@@ -1,0 +1,9 @@
+{
+  "name": "latihan-hari-1",
+  "private": true,
+  "type": "module",
+  "description": "Latihan Hari 1 — JS PGN. 'type: module' membolehkan `node latihan-01.js` memahami import/export.",
+  "scripts": {
+    "semak": "node semak.js"
+  }
+}

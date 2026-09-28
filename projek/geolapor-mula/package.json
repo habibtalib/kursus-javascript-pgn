@@ -1,0 +1,39 @@
+{
+  "name": "geolapor-mula",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GeoLapor — projek permulaan Hari 4 (Vite). Isi TODO mengikut lab Hari 4 & 5.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@loaders.gl/core": "^4.5.2",
+    "@loaders.gl/las": "^4.5.2",
+    "@mapbox/shp-write": "^0.4.3",
+    "@tmcw/togeojson": "^7.1.2",
+    "@turf/turf": "^7.4.0",
+    "geotiff": "^3.0.5",
+    "jszip": "^3.10.2",
+    "leaflet": "^1.9.4",
+    "proj4": "^2.22.0",
+    "shpjs": "^6.2.0",
+    "sql.js": "^1.14.2",
+    "tokml": "^0.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "vite": "^7.3.6"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ZON-A",
+      "properties": {
+        "kod": "ZON-A",
+        "nama": "Zon Presint Barat Laut",
+        "keluasan_ha": 1425.09
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.66,
+              2.937746
+            ],
+            [
+              101.698158,
+              2.943768
+            ],
+            [
+              101.701075,
+              2.97
+            ],
+            [
+              101.66,
+              2.97
+            ],
+            [
+              101.66,
+              2.937746
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ZON-B",
+      "properties": {
+        "kod": "ZON-B",
+        "nama": "Zon Presint Timur Laut",
+        "keluasan_ha": 1484.68
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.698158,
+              2.943768
+            ],
+            [
+              101.74,
+              2.936931
+            ],
+            [
+              101.74,
+              2.97
+            ],
+            [
+              101.701075,
+              2.97
+            ],
+            [
+              101.698158,
+              2.943768
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ZON-C",
+      "properties": {
+        "kod": "ZON-C",
+        "nama": "Zon Presint Barat",
+        "keluasan_ha": 1406.16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.66,
+              2.913528
+            ],
+            [
+              101.698403,
+              2.908494
+            ],
+            [
+              101.698158,
+              2.943768
+            ],
+            [
+              101.66,
+              2.937746
+            ],
+            [
+              101.66,
+              2.913528
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ZON-D",
+      "properties": {
+        "kod": "ZON-D",
+        "nama": "Zon Presint Timur",
+        "keluasan_ha": 1564.64
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.698403,
+              2.908494
+            ],
+            [
+              101.74,
+              2.91145
+            ],
+            [
+              101.74,
+              2.936931
+            ],
+            [
+              101.698158,
+              2.943768
+            ],
+            [
+              101.698403,
+              2.908494
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ZON-E",
+      "properties": {
+        "kod": "ZON-E",
+        "nama": "Zon Presint Selatan",
+        "keluasan_ha": 3010.16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.66,
+              2.88
+            ],
+            [
+              101.70215,
+              2.88
+            ],
+            [
+              101.74,
+              2.88
+            ],
+            [
+              101.74,
+              2.91145
+            ],
+            [
+              101.698403,
+              2.908494
+            ],
+            [
+              101.66,
+              2.913528
+            ],
+            [
+              101.66,
+              2.88
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,842 @@
+[
+  {
+    "type": "Feature",
+    "id": "LPR-0001",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6958,
+        2.9264
+      ]
+    },
+    "properties": {
+      "id": "LPR-0001",
+      "tajuk": "Papan tanda sempadan rosak",
+      "kategori": "infrastruktur",
+      "status": "baharu",
+      "catatan": "Tiang condong, perlu ganti.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-09-01T09:15:00+08:00",
+      "dikemaskini": "2026-09-01T09:15:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0002",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7096,
+        2.9647
+      ]
+    },
+    "properties": {
+      "id": "LPR-0002",
+      "tajuk": "Pokok tumbang menghalang laluan",
+      "kategori": "alam-sekitar",
+      "status": "selesai",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-08-20T08:10:00+08:00",
+      "dikemaskini": "2026-08-24T01:10:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0003",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6707,
+        2.928
+      ]
+    },
+    "properties": {
+      "id": "LPR-0003",
+      "tajuk": "Grafiti pada dinding awam",
+      "kategori": "lain-lain",
+      "status": "baharu",
+      "catatan": "Lokasi berhampiran laluan pejalan kaki.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-09-18T16:00:00+08:00",
+      "dikemaskini": "2026-09-18T16:00:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0004",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6921,
+        2.9127
+      ]
+    },
+    "properties": {
+      "id": "LPR-0004",
+      "tajuk": "Kerja tanah tanpa papan maklumat",
+      "kategori": "tanah",
+      "status": "ditolak",
+      "catatan": "Perlu pemeriksaan lanjut oleh pasukan teknikal.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-09-15T14:35:00+08:00",
+      "dikemaskini": "2026-09-15T17:35:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0005",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6662,
+        2.9342
+      ]
+    },
+    "properties": {
+      "id": "LPR-0005",
+      "tajuk": "Penanda aras (benchmark) hilang",
+      "kategori": "infrastruktur",
+      "status": "dalam-tindakan",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-09-13T08:05:00+08:00",
+      "dikemaskini": "2026-09-15T04:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0006",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.73,
+        2.9268
+      ]
+    },
+    "properties": {
+      "id": "LPR-0006",
+      "tajuk": "Penutup lubang utiliti hilang",
+      "kategori": "utiliti",
+      "status": "dalam-tindakan",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-09-01T14:25:00+08:00",
+      "dikemaskini": "2026-09-04T12:25:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0007",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6896,
+        2.955
+      ]
+    },
+    "properties": {
+      "id": "LPR-0007",
+      "tajuk": "Pokok tumbang menghalang laluan",
+      "kategori": "alam-sekitar",
+      "status": "dalam-tindakan",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-11T14:15:00+08:00",
+      "dikemaskini": "2026-09-13T00:15:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0008",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6711,
+        2.9225
+      ]
+    },
+    "properties": {
+      "id": "LPR-0008",
+      "tajuk": "Kenderaan ditinggalkan",
+      "kategori": "lain-lain",
+      "status": "baharu",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-09-06T09:05:00+08:00",
+      "dikemaskini": "2026-09-06T09:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0009",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6688,
+        2.9416
+      ]
+    },
+    "properties": {
+      "id": "LPR-0009",
+      "tajuk": "Kerja tanah tanpa papan maklumat",
+      "kategori": "tanah",
+      "status": "selesai",
+      "catatan": "",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-09-17T16:10:00+08:00",
+      "dikemaskini": "2026-09-21T07:10:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0010",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7269,
+        2.8872
+      ]
+    },
+    "properties": {
+      "id": "LPR-0010",
+      "tajuk": "Papan tanda sempadan rosak",
+      "kategori": "infrastruktur",
+      "status": "selesai",
+      "catatan": "",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-08-29T15:25:00+08:00",
+      "dikemaskini": "2026-08-30T18:25:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0011",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6943,
+        2.9301
+      ]
+    },
+    "properties": {
+      "id": "LPR-0011",
+      "tajuk": "Kabel elektrik terdedah",
+      "kategori": "utiliti",
+      "status": "ditolak",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-09-17T11:00:00+08:00",
+      "dikemaskini": "2026-09-20T06:00:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0012",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6755,
+        2.8834
+      ]
+    },
+    "properties": {
+      "id": "LPR-0012",
+      "tajuk": "Pembuangan sampah haram",
+      "kategori": "alam-sekitar",
+      "status": "baharu",
+      "catatan": "",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-08-03T13:40:00+08:00",
+      "dikemaskini": "2026-08-03T13:40:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0013",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.675,
+        2.9672
+      ]
+    },
+    "properties": {
+      "id": "LPR-0013",
+      "tajuk": "Grafiti pada dinding awam",
+      "kategori": "lain-lain",
+      "status": "baharu",
+      "catatan": "",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-08T17:05:00+08:00",
+      "dikemaskini": "2026-08-08T17:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0014",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.692,
+        2.8971
+      ]
+    },
+    "properties": {
+      "id": "LPR-0014",
+      "tajuk": "Mendapan tanah di tapak projek",
+      "kategori": "tanah",
+      "status": "baharu",
+      "catatan": "",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-08-21T10:10:00+08:00",
+      "dikemaskini": "2026-08-21T10:10:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0015",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7144,
+        2.9536
+      ]
+    },
+    "properties": {
+      "id": "LPR-0015",
+      "tajuk": "Lampu jalan tidak berfungsi",
+      "kategori": "infrastruktur",
+      "status": "selesai",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-09-17T09:15:00+08:00",
+      "dikemaskini": "2026-09-20T01:15:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0016",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6914,
+        2.9657
+      ]
+    },
+    "properties": {
+      "id": "LPR-0016",
+      "tajuk": "Penutup lubang utiliti hilang",
+      "kategori": "utiliti",
+      "status": "dalam-tindakan",
+      "catatan": "Perlu pemeriksaan lanjut oleh pasukan teknikal.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-08-08T16:10:00+08:00",
+      "dikemaskini": "2026-08-12T03:10:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0017",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6737,
+        2.9544
+      ]
+    },
+    "properties": {
+      "id": "LPR-0017",
+      "tajuk": "Pembuangan sampah haram",
+      "kategori": "alam-sekitar",
+      "status": "baharu",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-14T16:50:00+08:00",
+      "dikemaskini": "2026-09-14T16:50:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0018",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6853,
+        2.8873
+      ]
+    },
+    "properties": {
+      "id": "LPR-0018",
+      "tajuk": "Grafiti pada dinding awam",
+      "kategori": "lain-lain",
+      "status": "baharu",
+      "catatan": "Sudah dimaklumkan kepada pihak berkuasa tempatan.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-04T12:30:00+08:00",
+      "dikemaskini": "2026-08-04T12:30:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0019",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7284,
+        2.908
+      ]
+    },
+    "properties": {
+      "id": "LPR-0019",
+      "tajuk": "Batu sempadan lot tercabut",
+      "kategori": "tanah",
+      "status": "baharu",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-08-25T08:55:00+08:00",
+      "dikemaskini": "2026-08-25T08:55:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0020",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6815,
+        2.9269
+      ]
+    },
+    "properties": {
+      "id": "LPR-0020",
+      "tajuk": "Jalan berlubang di simpang",
+      "kategori": "infrastruktur",
+      "status": "baharu",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-08-29T14:15:00+08:00",
+      "dikemaskini": "2026-08-29T14:15:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0021",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7319,
+        2.9656
+      ]
+    },
+    "properties": {
+      "id": "LPR-0021",
+      "tajuk": "Paip air bocor di bahu jalan",
+      "kategori": "utiliti",
+      "status": "dalam-tindakan",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-08-27T17:20:00+08:00",
+      "dikemaskini": "2026-08-30T04:20:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0022",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7236,
+        2.9574
+      ]
+    },
+    "properties": {
+      "id": "LPR-0022",
+      "tajuk": "Pokok tumbang menghalang laluan",
+      "kategori": "alam-sekitar",
+      "status": "dalam-tindakan",
+      "catatan": "Perlu pemeriksaan lanjut oleh pasukan teknikal.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-02T08:40:00+08:00",
+      "dikemaskini": "2026-09-06T07:40:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0023",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7216,
+        2.9505
+      ]
+    },
+    "properties": {
+      "id": "LPR-0023",
+      "tajuk": "Gerai sementara di rizab jalan",
+      "kategori": "lain-lain",
+      "status": "dalam-tindakan",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-23T14:05:00+08:00",
+      "dikemaskini": "2026-08-24T16:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0024",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7168,
+        2.882
+      ]
+    },
+    "properties": {
+      "id": "LPR-0024",
+      "tajuk": "Kerja tanah tanpa papan maklumat",
+      "kategori": "tanah",
+      "status": "dalam-tindakan",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-08-26T13:45:00+08:00",
+      "dikemaskini": "2026-08-29T16:45:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0025",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7353,
+        2.8926
+      ]
+    },
+    "properties": {
+      "id": "LPR-0025",
+      "tajuk": "Pagar keselamatan patah",
+      "kategori": "infrastruktur",
+      "status": "selesai",
+      "catatan": "Lokasi berhampiran laluan pejalan kaki.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-08-12T11:00:00+08:00",
+      "dikemaskini": "2026-08-14T16:00:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0026",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7339,
+        2.9203
+      ]
+    },
+    "properties": {
+      "id": "LPR-0026",
+      "tajuk": "Pili bomba rosak",
+      "kategori": "utiliti",
+      "status": "baharu",
+      "catatan": "",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-09-03T08:30:00+08:00",
+      "dikemaskini": "2026-09-03T08:30:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0027",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6708,
+        2.9324
+      ]
+    },
+    "properties": {
+      "id": "LPR-0027",
+      "tajuk": "Pembuangan sampah haram",
+      "kategori": "alam-sekitar",
+      "status": "baharu",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-05T09:05:00+08:00",
+      "dikemaskini": "2026-09-05T09:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0028",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7165,
+        2.9666
+      ]
+    },
+    "properties": {
+      "id": "LPR-0028",
+      "tajuk": "Kenderaan ditinggalkan",
+      "kategori": "lain-lain",
+      "status": "dalam-tindakan",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-15T10:45:00+08:00",
+      "dikemaskini": "2026-08-16T18:45:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0029",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7109,
+        2.8924
+      ]
+    },
+    "properties": {
+      "id": "LPR-0029",
+      "tajuk": "Tanah runtuh kecil di cerun",
+      "kategori": "tanah",
+      "status": "selesai",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-09-20T08:25:00+08:00",
+      "dikemaskini": "2026-09-20T09:25:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0030",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7237,
+        2.9066
+      ]
+    },
+    "properties": {
+      "id": "LPR-0030",
+      "tajuk": "Tiang GPS rujukan senget",
+      "kategori": "infrastruktur",
+      "status": "baharu",
+      "catatan": "Keadaan boleh membahayakan pengguna jalan.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-08-20T13:35:00+08:00",
+      "dikemaskini": "2026-08-20T13:35:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0031",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7157,
+        2.9012
+      ]
+    },
+    "properties": {
+      "id": "LPR-0031",
+      "tajuk": "Pili bomba rosak",
+      "kategori": "utiliti",
+      "status": "baharu",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-08-15T16:50:00+08:00",
+      "dikemaskini": "2026-08-15T16:50:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0032",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7288,
+        2.8944
+      ]
+    },
+    "properties": {
+      "id": "LPR-0032",
+      "tajuk": "Pembakaran terbuka dikesan",
+      "kategori": "alam-sekitar",
+      "status": "ditolak",
+      "catatan": "Dilaporkan oleh orang awam, disahkan di lokasi.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-07T16:15:00+08:00",
+      "dikemaskini": "2026-09-11T14:15:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0033",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7267,
+        2.8826
+      ]
+    },
+    "properties": {
+      "id": "LPR-0033",
+      "tajuk": "Kenderaan ditinggalkan",
+      "kategori": "lain-lain",
+      "status": "selesai",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-28T10:35:00+08:00",
+      "dikemaskini": "2026-08-30T08:35:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0034",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6978,
+        2.8904
+      ]
+    },
+    "properties": {
+      "id": "LPR-0034",
+      "tajuk": "Tanah runtuh kecil di cerun",
+      "kategori": "tanah",
+      "status": "baharu",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-08-19T09:20:00+08:00",
+      "dikemaskini": "2026-08-19T09:20:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0035",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6855,
+        2.9114
+      ]
+    },
+    "properties": {
+      "id": "LPR-0035",
+      "tajuk": "Pagar keselamatan patah",
+      "kategori": "infrastruktur",
+      "status": "baharu",
+      "catatan": "Sudah dimaklumkan kepada pihak berkuasa tempatan.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-09-14T14:45:00+08:00",
+      "dikemaskini": "2026-09-14T14:45:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0036",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6909,
+        2.8929
+      ]
+    },
+    "properties": {
+      "id": "LPR-0036",
+      "tajuk": "Kabel elektrik terdedah",
+      "kategori": "utiliti",
+      "status": "baharu",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai1@latihan.test",
+      "dicipta": "2026-09-12T10:10:00+08:00",
+      "dikemaskini": "2026-09-12T10:10:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0037",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6948,
+        2.9408
+      ]
+    },
+    "properties": {
+      "id": "LPR-0037",
+      "tajuk": "Air sungai berubah warna",
+      "kategori": "alam-sekitar",
+      "status": "selesai",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai2@latihan.test",
+      "dicipta": "2026-09-18T13:35:00+08:00",
+      "dikemaskini": "2026-09-18T18:35:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0038",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7282,
+        2.9248
+      ]
+    },
+    "properties": {
+      "id": "LPR-0038",
+      "tajuk": "Grafiti pada dinding awam",
+      "kategori": "lain-lain",
+      "status": "baharu",
+      "catatan": "Mohon tindakan segera sebelum musim hujan.",
+      "pelapor": "pegawai3@latihan.test",
+      "dicipta": "2026-08-16T09:50:00+08:00",
+      "dikemaskini": "2026-08-16T09:50:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0039",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.7363,
+        2.9068
+      ]
+    },
+    "properties": {
+      "id": "LPR-0039",
+      "tajuk": "Tanah runtuh kecil di cerun",
+      "kategori": "tanah",
+      "status": "dalam-tindakan",
+      "catatan": "Perlu pemeriksaan lanjut oleh pasukan teknikal.",
+      "pelapor": "pegawai4@latihan.test",
+      "dicipta": "2026-08-13T15:05:00+08:00",
+      "dikemaskini": "2026-08-13T22:05:00+08:00"
+    }
+  },
+  {
+    "type": "Feature",
+    "id": "LPR-0040",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        101.6993,
+        2.953
+      ]
+    },
+    "properties": {
+      "id": "LPR-0040",
+      "tajuk": "Penanda aras (benchmark) hilang",
+      "kategori": "infrastruktur",
+      "status": "dalam-tindakan",
+      "catatan": "Gambar diambil semasa lawatan tapak pagi tadi.",
+      "pelapor": "pegawai5@latihan.test",
+      "dicipta": "2026-09-06T17:30:00+08:00",
+      "dikemaskini": "2026-09-09T04:30:00+08:00"
+    }
+  }
+]
