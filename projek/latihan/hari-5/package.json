@@ -1,0 +1,6 @@
+{
+  "name": "latihan-hari-5",
+  "private": true,
+  "type": "module",
+  "description": "Latihan Hari 5 — JS PGN. Logik tulen state/ & utils/ (tanpa DOM, tanpa rangkaian): jalankan dalam pelayar (platform) atau node latihan-NN.js"
+}

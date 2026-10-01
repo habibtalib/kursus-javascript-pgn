@@ -10,14 +10,14 @@ Semua kod yang dijalankan sepanjang Kursus Pengaturcaraan JavaScript (PGN), 28 S
 |--------|-----|------|-----------|
 | [`api/`](./api/README.md) | Mock REST API (`server.mjs`) — laporan, kategori, layer, statistik; hidang `data/` di `/data/…` | 2–5 | **tiada** (Node built-ins) |
 | [`data/`](./data/README.md) | Fail geospatial sampel: GeoJSON, Shapefile (EPSG:3375), GeoPackage, KML/KMZ, GeoTIFF, LAS + skrip jana/semak (`data/jana/`) | 2–5 | `data/jana/` sahaja |
-| `latihan/` | Latihan Hari 1–3 tanpa build (HTML + `<script type="module">`) — diselenggara bersama bahan harian | 1–3 | tiada |
+| `latihan/` | Latihan Hari 1–5 tanpa build (Hari 1–3: HTML + `<script type="module">`; Hari 4–5: logik tulen, jalankan dengan `node` atau di Pelatih) — diselenggara bersama bahan harian | 1–5 | tiada |
 | [`geolapor-mula/`](./geolapor-mula/README.md) | **Projek permulaan Hari 4** (Vite): struktur folder + fail rangka dengan `TODO`; memaparkan peta kosong | 4–5 | Vite, Leaflet, Turf, proj4, … |
 
 ```text
 projek/
 ├── api/                 server.mjs · reset-data.mjs · data/laporan.json · data/asal/ · data/lapisan/
 ├── data/                *.geojson *.zip *.gpkg *.kml *.kmz *.tif *.las · jana/ (jana-data.mjs, semak-data.mjs)
-├── latihan/             hari-1/ … hari-3/
+├── latihan/             hari-1/ … hari-5/
 └── geolapor-mula/       index.html · src/{main.js, services, state, utils, io, ui}
 ```
 
