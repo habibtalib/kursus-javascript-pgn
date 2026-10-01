@@ -12,7 +12,7 @@
 > |---|---|---|
 > | `~/latihan-npm` | Latihan sekali guna (npm) | Lab 4.1 langkah 1–6 |
 > | `~/demo-vite` | Latihan sekali guna (Vite), **bukan GeoLapor** | Lab 4.2 Bahagian A |
-> | `projek/geolapor-mula` | **Projek sebenar GeoLapor**, disimpan hingga Hari 5 | Lab 4.1 langkah 7 (pasang sahaja), Lab 4.2 Bahagian B–D, Lab 4.3, Lab 4.4, Hari 5 |
+> | `projek/geolapor-mula` | **Projek sebenar GeoLapor**, disimpan hingga Hari 5 | Lab 4.1 langkah 7 (pasang awal sahaja), Lab 4.2 Bahagian B–D, Lab 4.3, Lab 4.4, Hari 5 |
 >
 > Urutan hari ini: belajar setiap alat pada folder latihan dahulu, kemudian gunakannya pada GeoLapor.
 
@@ -164,9 +164,9 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
    npm ls --depth=0              # eslint dalam devDependencies
    ```
 
-7. **Pakej GeoLapor:**
+7. **Sediakan GeoLapor (pasang awal):**
 
-   > 📁 **Tukar folder:** dari `~/latihan-npm` ke **projek sebenar** `projek/geolapor-mula` (aplikasi yang anda bina hingga Hari 5). Sekarang **pasang sahaja** dan kenali pakejnya. Pembinaan bermula di **Lab 4.2 Bahagian B**, selepas demo Vite.
+   > 📁 **Tukar folder:** dari `~/latihan-npm` ke **projek sebenar** `projek/geolapor-mula` (aplikasi yang anda bina hingga Hari 5). Kita **pasang sekarang, di S1**, supaya masalah rangkaian/proksi dikesan awal: S2 tidak boleh bermula tanpa `node_modules`. Anda **belum membinanya** di sini; pembinaan bermula di **Lab 4.2 Bahagian B**, selepas demo Vite di folder lain (`~/demo-vite`).
 
    ```bash
    cd <repo>/projek/geolapor-mula
