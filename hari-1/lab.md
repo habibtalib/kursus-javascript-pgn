@@ -4,6 +4,8 @@
 
 > **Peraturan lab:** Setiap latihan ada baris `// ⇒ RAMAL: ______`. **Tulis ramalan anda dahulu**, kemudian jalankan. Ramalan yang salah bukan kegagalan — ia tepat di mana pembelajaran berlaku. Bandingkan dengan jurulatih atau pasangan anda hanya selepas checkpoint atau jika tersekat > 10 minit.
 
+> 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
+
 | Lab | Sesi | Fail | Hasil |
 |-----|------|------|-------|
 | 1.0 | S1 (15 min pertama) | — | Node, editor & server tempatan sedia |

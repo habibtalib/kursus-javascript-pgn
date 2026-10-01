@@ -36,9 +36,23 @@ projek/              api/ · data/ · latihan/ · geolapor-mula/
 
 ## Mula pantas
 
+> 🪟 **Windows:** pasang **Git for Windows** dan jadikan **Git Bash** terminal lalai VS Code ([`docs/persediaan.md` §2.4–2.5](./docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Semua arahan bash dalam kursus berfungsi tanpa diubah. Untuk langkah utama, versi **Windows PowerShell** turut disediakan.
+
 ```bash
 cd projek/api && npm start                   # mock API → http://localhost:3000
 cd projek/geolapor-mula && npm install && npm run dev
+```
+
+**Windows (PowerShell):**
+
+```powershell
+# Terminal 1 — mock API → http://localhost:3000
+cd projek/api
+npm start
+# Terminal 2 (baharu)
+cd projek/geolapor-mula
+npm install
+npm run dev
 ```
 
 ---

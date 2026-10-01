@@ -6,6 +6,8 @@
 > **Dua terminal sepanjang hari:** (1) `cd projek/api && npm start` → mock API `http://localhost:3000`; (2) `npm run dev` dalam folder GeoLapor anda.
 > **Git (pilihan):** commit selepas setiap ✅ checkpoint — `git commit -am "Lab 5.1: store"`.
 
+> 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
+
 | Lab | Sesi | Tempoh | Hasil |
 |-----|------|--------|-------|
 | 5.1 | S1 | ≈ 50 min (langkah 1–10 teras; 11–13 selepas mini-kuliah) | `store.js` + ujian · `pemilih.js` · `tindakan.js` · UI melanggan store · URL state · optimistic update |
@@ -274,6 +276,16 @@ grep -rn "from 'leaflet'" src/state src/services src/io src/utils
 grep -rn "document\.\|window\." src/state/store.js src/state/pemilih.js src/state/tindakan.js src/utils
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+$lapisan = 'src/state', 'src/services', 'src/io', 'src/utils'
+Get-ChildItem $lapisan -Recurse -File | Select-String -Pattern "from '\.\./ui"
+Get-ChildItem $lapisan -Recurse -File | Select-String -Pattern "from 'leaflet'"
+Get-ChildItem src/state/store.js, src/state/pemilih.js, src/state/tindakan.js, src/utils -Recurse -File |
+  Select-String -Pattern 'document\.|window\.'
+```
+
 Ketiga-tiga mesti **kosong** (kecuali `state/url.js`, yang sengaja menyentuh `location`/`history` — ia adalah *adapter* browser; ⭐ pindahkannya ke `ui/` jika anda mahu ketat).
 
 **3. Kuatkuasakan dengan ESLint.** Tambah blok ini **selepas** konfigurasi sedia ada dalam `eslint.config.js`:
@@ -481,6 +493,12 @@ Kedua-duanya mesti memaparkan notis BM (bukan hanya merah di console).
 ```bash
 # Semakan pantas gate keselamatan
 grep -rn "innerHTML" src/     # setiap hasil mesti TIDAK menggunakan data API/pengguna
+```
+
+**Windows (PowerShell):**
+
+```powershell
+Get-ChildItem src -Recurse -File | Select-String -Pattern 'innerHTML'
 ```
 
 ### ✅ Checkpoint 5.3

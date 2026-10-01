@@ -12,6 +12,18 @@ npm run format           # Prettier 3
 npm run build && npm run preview
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+cd projek/geolapor-mula
+npm install
+Copy-Item .env.example .env
+npm run dev
+npm run lint
+npm run format
+npm run build; if ($LASTEXITCODE -eq 0) { npm run preview }
+```
+
 Pastikan mock API berjalan dalam terminal lain: `cd projek/api && npm start`.
 
 ## Struktur

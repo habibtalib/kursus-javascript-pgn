@@ -16,6 +16,13 @@ npm run reset-data   # pulihkan data/laporan.json daripada data/asal/laporan.jso
 PORT=3001 npm start  # port lain jika 3000 sudah digunakan
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+# cd, npm start, npm run dev dan npm run reset-data sama seperti di atas. Hanya port lain berbeza:
+$env:PORT = "3001"; npm start   # kekal dalam sesi terminal ini; buang dengan: Remove-Item Env:PORT
+```
+
 Keperluan: Node.js 22+. `npm install` tidak diperlukan (tiada pakej), tetapi selamat dijalankan.
 
 Setiap request dilog ke konsol:
@@ -81,6 +88,8 @@ Data dijana oleh `projek/data/jana/jana-data.mjs` (lihat [`../data/README.md`](.
 
 ## Contoh `curl`
 
+> 🪟 **Windows:** jalankan contoh bash di bawah dalam **Git Bash**. Dalam Windows PowerShell, `curl` ialah alias kepada `Invoke-WebRequest` (bukan curl sebenar), jadi guna `curl.exe` (GET sahaja; PowerShell 5 merosakkan `"` dalam badan JSON) atau versi `Invoke-RestMethod` selepas blok bash.
+
 ```bash
 API=http://localhost:3000
 KUNCI='X-API-Key: latihan-pgn-2026'
@@ -141,6 +150,81 @@ curl -i -X OPTIONS $API/api/laporan -H 'Origin: http://localhost:5173' \
 curl $API/data/
 curl -O $API/data/sempadan-zon.geojson
 curl -O $API/data/kemudahan.gpkg
+```
+
+**Windows (PowerShell):**
+
+```powershell
+$api   = 'http://localhost:3000'
+$kunci = @{ 'X-API-Key' = 'latihan-pgn-2026' }
+$jenis = 'application/json; charset=utf-8'
+# 4xx/5xx membaling ralat dalam Windows PowerShell → try { … } catch { kod status; badan }
+
+# Kesihatan & rujukan
+Invoke-RestMethod "$api/api/kesihatan"
+Invoke-RestMethod "$api/api/kategori"
+Invoke-RestMethod "$api/api/statistik"
+
+# Senarai laporan + penapis (boleh digabung) — petik URL yang ada &
+Invoke-RestMethod "$api/api/laporan"
+Invoke-RestMethod "$api/api/laporan?kategori=tanah"
+Invoke-RestMethod "$api/api/laporan?status=baharu,dalam-tindakan"
+Invoke-RestMethod "$api/api/laporan?q=sungai"
+Invoke-RestMethod "$api/api/laporan?bbox=101.66,2.88,101.70,2.92"
+Invoke-RestMethod "$api/api/laporan?had=5&mula=10"
+(Invoke-WebRequest -UseBasicParsing "$api/api/laporan?had=1").Headers['X-Jumlah']   # jumlah padanan sebelum had/mula
+
+# Satu laporan
+Invoke-RestMethod "$api/api/laporan/LPR-0001"
+try { Invoke-WebRequest -UseBasicParsing "$api/api/laporan/LPR-9999" } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }   # 404
+
+# Cipta — bentuk rata ATAU GeoJSON Feature
+$rata = @{ tajuk = 'Lampu jalan tidak berfungsi'; kategori = 'infrastruktur'; catatan = 'Depan blok C'; lat = 2.9264; lng = 101.6958 }
+Invoke-RestMethod -Method Post -Uri "$api/api/laporan" -Headers $kunci -ContentType $jenis -Body ($rata | ConvertTo-Json -Depth 10)
+$feature = @{
+  type       = 'Feature'
+  geometry   = @{ type = 'Point'; coordinates = @(101.7, 2.95) }
+  properties = @{ tajuk = 'Paip air bocor'; kategori = 'utiliti' }
+}
+Invoke-RestMethod -Method Post -Uri "$api/api/laporan" -Headers $kunci -ContentType $jenis -Body ($feature | ConvertTo-Json -Depth 10)
+
+# 401 — tiada key
+try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri "$api/api/laporan" -ContentType $jenis -Body (@{ tajuk = 'Ujian' } | ConvertTo-Json -Depth 10) } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }
+
+# 422 — tidak sah (tajuk pendek, kategori salah, lat string, lng di luar Malaysia)
+$salah = @{ tajuk = 'abc'; kategori = 'x'; lat = '2.9'; lng = 150 } | ConvertTo-Json -Depth 10
+try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri "$api/api/laporan" -Headers $kunci -ContentType $jenis -Body $salah } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }
+
+# Kemas kini sebahagian
+Invoke-RestMethod -Method Patch -Uri "$api/api/laporan/LPR-0001" -Headers $kunci -ContentType $jenis -Body (@{ status = 'dalam-tindakan' } | ConvertTo-Json -Depth 10)
+Invoke-RestMethod -Method Patch -Uri "$api/api/laporan/LPR-0001" -Headers $kunci -ContentType $jenis `
+  -Body (@{ catatan = 'Pasukan dihantar'; lat = 2.927; lng = 101.696 } | ConvertTo-Json -Depth 10)
+
+# Padam
+(Invoke-WebRequest -UseBasicParsing -Method Delete -Uri "$api/api/laporan/LPR-0041" -Headers $kunci).StatusCode   # 204 (tiada badan)
+
+# Layer rujukan
+Invoke-RestMethod "$api/api/lapisan"
+Invoke-RestMethod "$api/api/lapisan/sempadan-zon"
+Invoke-RestMethod "$api/api/lapisan/sungai"
+Invoke-RestMethod "$api/api/lapisan/kemudahan"
+
+# Mod pengajaran
+(Measure-Command { Invoke-WebRequest -UseBasicParsing "$api/api/laporan?lambat=2000" }).TotalSeconds   # ≈ 2
+try { Invoke-WebRequest -UseBasicParsing "$api/api/statistik?gagal=1" } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }   # 500
+
+# Preflight CORS (apa yang browser hantar sebelum POST dengan X-API-Key)
+$r = Invoke-WebRequest -UseBasicParsing -Method Options -Uri "$api/api/laporan" -Headers @{
+  'Origin'                         = 'http://localhost:5173'
+  'Access-Control-Request-Method'  = 'POST'
+  'Access-Control-Request-Headers' = 'content-type,x-api-key'
+}
+$r.StatusCode; $r.Headers
+
+# Fail statik projek/data
+(Invoke-WebRequest -UseBasicParsing "$api/data/").Content
+Invoke-WebRequest -UseBasicParsing "$api/data/sempadan-zon.geojson" -OutFile sempadan-zon.geojson
+Invoke-WebRequest -UseBasicParsing "$api/data/kemudahan.gpkg" -OutFile kemudahan.gpkg
 ```
 
 Windows PowerShell: guna `curl.exe` (bukan alias `curl`) dan petikan berganda dengan `\"` dalam JSON, atau `Invoke-RestMethod`.

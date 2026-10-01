@@ -84,6 +84,15 @@ npm init -y                      # jana package.json default
 npm pkg set type=module          # benarkan import/export dalam .js (Node)
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+mkdir latihan-npm
+cd latihan-npm
+npm init -y
+npm pkg set type=module
+```
+
 ```jsonc
 {
   "name": "latihan-npm",

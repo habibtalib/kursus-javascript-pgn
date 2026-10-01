@@ -4,6 +4,8 @@
 
 > **Peraturan lab:** Hari ini banyak **arahan terminal**. Baca output setiap arahan sebelum meneruskan, kerana 80% masalah tooling kelihatan dalam 3 baris terakhir output. Kod rujukan penuh untuk setiap fail diberi di bawah (semuanya telah dibina dan diuji dengan Vite 7.3 + data kursus). Taip atau salin **satu bahagian pada satu masa**, simpan, dan lihat hasilnya di browser sebelum bahagian seterusnya.
 
+> 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
+
 | Lab | Sesi | Folder | Hasil |
 |-----|------|--------|-------|
 | 4.1 | S1 9.00–11.00 | `~/latihan-npm/` + `projek/geolapor-mula` | npm init/install/semver/lockfile/scripts; `npm run periksa`; pakej GeoLapor dipasang |
@@ -38,6 +40,17 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
    npm pkg set type=module
    npm pkg set private=true --json
    cat package.json
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   mkdir ~/latihan-npm
+   cd ~/latihan-npm
+   npm init -y
+   npm pkg set type=module
+   npm pkg set private=true --json
+   Get-Content package.json
    ```
 
 2. **Pasang dengan versi lama dengan sengaja** (untuk eksperimen semver nanti):
@@ -98,6 +111,16 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
    grep proj4 package.json       # julat kekal "^2.19.0"
    ```
 
+   **Windows (PowerShell):**
+
+   ```powershell
+   npm view proj4 version        # terkini
+   npm outdated                  # Current 2.19.0 · Wanted 2.22.x · Latest 2.22.x
+   npm update                    # naik ke "Wanted" (dalam julat ^2.19.0)
+   npm run periksa               # versi kini 2.22.x
+   Select-String proj4 package.json   # julat kekal ^2.19.0 (grep → Select-String)
+   ```
+
    > Perhatikan: `npm update` mengemas kini **lockfile** dan `node_modules`, tetapi julat dalam `package.json` masih `^2.19.0` kerana 2.22 sudah memenuhinya. Lockfile ialah rekod apa yang **sebenarnya** dipasang.
 
 5. **Lockfile vs `npm ci`:**
@@ -106,6 +129,17 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
    rm -rf node_modules
    npm ci                                    # pasang TEPAT dari lockfile
    npm pkg set dependencies.jszip="^3.10.2"  # ubah package.json TANPA install
+   npm ci                                    # ❌ EUSAGE: package.json dan lockfile tidak sepadan
+   npm pkg delete dependencies.jszip
+   npm ci                                    # ✅
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   Remove-Item -Recurse -Force node_modules
+   npm ci                                    # pasang TEPAT dari lockfile
+   npm pkg set "dependencies.jszip=^3.10.2"  # ubah package.json TANPA install
    npm ci                                    # ❌ EUSAGE: package.json dan lockfile tidak sepadan
    npm pkg delete dependencies.jszip
    npm ci                                    # ✅
@@ -268,6 +302,15 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
    cp .env.example .env        # VITE_API_URL & VITE_API_KEY
    npm run dev                 # → http://localhost:5173 (peta kosong + panel)
    grep -rn "TODO \[H4-S2\]" src   # senarai kerja S2
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   cd C:\latihan\kursus-javascript-pgn-5-hari\projek\geolapor-mula   # laluan repo anda
+   Copy-Item .env.example .env
+   npm run dev
+   Get-ChildItem src -Recurse -File | Select-String -Pattern 'TODO \[H4-S2\]'   # senarai kerja S2 (terminal kedua)
    ```
 
    Lihat Console: tiada error, dan peta Putrajaya dipapar (`ciptaPeta` sudah disediakan). Setiap fail rangka bermula dengan `/* eslint-disable no-unused-vars … */`. **Buang baris itu** apabila anda melengkapkan fail tersebut (Lab 4.3 akan memeriksanya).
@@ -1237,6 +1280,12 @@ Menjalankan ESLint 9 dan Prettier pada GeoLapor, memahami setiap peraturan dalam
 
    ```bash
    npm run lint && npm run build && npm run preview
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   npm run lint; if ($LASTEXITCODE -eq 0) { npm run build }; if ($LASTEXITCODE -eq 0) { npm run preview }
    ```
 
 ### ✅ Checkpoint

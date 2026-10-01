@@ -26,9 +26,10 @@ Bilik latihan mungkin **tiada internet yang stabil**, jadi semua lab boleh disia
 | 5 | Salinan repo kursus + `node_modules` (kit luar talian) | ✅ | Tidak (salin dari USB/pemacu kongsi) | ☐ |
 | 6 | Pemasangan disahkan dengan arahan di [§3](#3-sahkan-pemasangan) | ✅ | — | ☐ |
 | 7 | Sambungan VS Code pilihan: Thunder Client **atau** REST Client | ⭐ Pilihan | Mungkin | ☐ |
-| 8 | **Git** | ⭐ Pilihan | Ya | ☐ |
+| 8 | **Git** — Windows: **Git for Windows** (membawa **Git Bash**, terminal kursus) | ✅ Windows · ⭐ macOS/Linux | Ya | ☐ |
 | 9 | Postman (desktop) | ⭐ Pilihan | Ya | ☐ |
 | 10 | QGIS (untuk melihat fail sampel & menukar ECW) | ⭐ Pilihan | Ya | ☐ |
+| 11 | Windows: **Git Bash** sebagai terminal lalai VS Code ([§2.5](#25-terminal-vs-code-di-windows--git-bash)) | ✅ Windows | Tidak | ☐ |
 
 > 💡 **Tip — jika IT tidak sempat meluluskan:** maklumkan jurulatih **sebelum** kursus. Jurulatih boleh sediakan laptop gantian atau pakej *portable* (VS Code *zip* dan Node.js *zip* untuk Windows yang tidak memerlukan hak pentadbir).
 
@@ -74,24 +75,71 @@ code --install-extension ./ritwickdey.LiveServer-5.7.9.vsix
 
 - Muat turun pemasang **LTS** dari <https://nodejs.org/en/download>. Versi 22 (*Jod*) atau 24 (*Krypton*) sama-sama sesuai. Kursus memerlukan **v22 ke atas**.
 - Windows: pilih pemasang `.msi` dan kekalkan pilihan **"Add to PATH"**. Selepas pasang, **tutup dan buka semula** terminal/VS Code supaya `PATH` baharu dibaca.
+- Windows dengan **winget** (jika dibenarkan IT) — dalam PowerShell atau Command Prompt:
+  ```powershell
+  winget install --id OpenJS.NodeJS.LTS -e --source winget
+  ```
 - `npm` dipasang bersama Node.js. Anda tidak perlu memasangnya berasingan.
 
 > ⚠️ **Kesilapan lazim — Node lama dalam `PATH`.** Sesetengah komputer sudah ada Node 14/16 dari projek lama. `node -v` akan menunjukkan versi lama itu. Nyahpasang versi lama atau pastikan versi baharu berada di hadapan dalam `PATH`.
 
-### 2.4 Git (pilihan)
+### 2.4 Git for Windows (Git Bash)
 
-- <https://git-scm.com/downloads>. Tidak wajib: repo kursus boleh disalin sebagai folder atau zip.
+- **Windows — wajib.** *Git for Windows* membawa **Git Bash**, terminal bash yang kita guna sepanjang kursus. Semua arahan dalam nota (`cd`, `cp`, `curl`, `grep`, `&&`, `PORT=3001 npm start` …) berfungsi di dalamnya tanpa diubah.
+  - Melalui **winget** (jika dibenarkan IT) — dalam PowerShell atau Command Prompt:
+    ```powershell
+    winget install --id Git.Git -e --source winget
+    ```
+  - Atau muat turun pemasang dari <https://git-scm.com/downloads/win> (*64-bit Git for Windows Setup*). Kekalkan pilihan lalai, termasuk **"Git from the command line and also from 3rd-party software"** supaya `git` masuk ke `PATH`.
+  - Tiada hak pentadbir? Minta IT memasangnya, atau guna versi *Portable* dari laman yang sama.
+- **macOS/Linux — pilihan.** Terminal sedia ada (zsh/bash) sudah sesuai. <https://git-scm.com/downloads>.
+- Git sendiri tidak diperlukan untuk mendapatkan repo: repo kursus boleh disalin sebagai folder atau zip.
 - Jika dipasang, tetapkan identiti **latihan** (jangan guna akaun peribadi pada komputer kongsi):
   ```bash
   git config --global user.name "Peserta Latihan"
   git config --global user.email "peserta@latihan.test"
   ```
 
+### 2.5 Terminal VS Code di Windows — Git Bash
+
+Semua arahan terminal dalam kursus ditulis untuk **bash**. Di Windows, jadikan **Git Bash** terminal lalai VS Code:
+
+1. Pasang Node.js (§2.3) dan Git for Windows (§2.4), kemudian **tutup semua tetingkap VS Code dan buka semula**.
+2. `Ctrl+Shift+P` → taip **Terminal: Select Default Profile** → pilih **Git Bash**.
+3. Tutup terminal lama (ikon 🗑️ *Kill Terminal*), kemudian buka terminal baharu dengan `` Ctrl+` ``. Prompt Git Bash menunjukkan `MINGW64` dan berakhir dengan `$`.
+4. Sahkan dalam Git Bash:
+
+   ```bash
+   node -v          # v22.x atau v24.x
+   npm -v           # 10.x atau lebih baharu
+   git --version    # git version 2.x.x.windows.1
+   ```
+
+   `command not found`? Tutup **semua** tetingkap VS Code dan buka semula (`PATH` baharu hanya dibaca semasa VS Code bermula).
+
+Perkara yang berbeza dalam Git Bash:
+
+| Perkara | Dalam Git Bash |
+|---------|----------------|
+| Folder rumah `~` | `C:\Users\<nama>` — cth `~/latihan-npm` ialah `C:\Users\<nama>\latihan-npm` |
+| Laluan | Guna `/`, bukan `\`. Pemacu `C:` ditulis `/c/`, cth `cd /c/latihan/kursus-javascript-pgn-5-hari` |
+| `Ctrl+C` | **Hentikan** proses yang sedang berjalan (mock API, `npm run dev`). Dalam terminal VS Code, `Ctrl+C` menyalin hanya jika ada teks dipilih |
+| Salin | Pilih teks dengan tetikus. VS Code: kemudian `Ctrl+C`. Tetingkap Git Bash berasingan: teks yang dipilih terus disalin |
+| Tampal | VS Code: `Ctrl+V`, atau klik kanan (tampal jika tiada teks dipilih). Tetingkap Git Bash berasingan: `Shift+Insert` atau klik kanan → *Paste* |
+| Buka folder semasa dalam File Explorer | `explorer .` |
+
+> 💡 **Lebih selesa dengan PowerShell?** Nota menyediakan blok **Windows (PowerShell)** untuk langkah utama. Dalam Windows PowerShell 5.1 (lalai Windows 10/11), ingat perbezaan ini:
+> - `&&` tidak wujud: tulis setiap arahan pada baris sendiri, atau `npm run lint; if ($LASTEXITCODE -eq 0) { npm run build }`.
+> - `curl` ialah alias kepada `Invoke-WebRequest`: guna `Invoke-RestMethod` (blok PowerShell dalam nota) atau `curl.exe`.
+> - `PORT=3001 npm start` tidak berfungsi: `$env:PORT = "3001"; npm start`.
+> - `cp` / `rm -rf` / `cat` / `grep` → `Copy-Item` / `Remove-Item -Recurse -Force` / `Get-Content` / `Select-String`.
+> - Ralat `npm.ps1 cannot be loaded … running scripts is disabled`: guna Git Bash (lihat [§6](#6--masalah-lazim--penyelesaian)).
+
 ---
 
 ## 3. Sahkan pemasangan
 
-Buka **terminal** (VS Code: `` Ctrl+` ``; Windows: *Command Prompt* atau *PowerShell*) dan jalankan:
+Buka **terminal** (VS Code: `` Ctrl+` ``; Windows: **Git Bash**, lihat [§2.5](#25-terminal-vs-code-di-windows--git-bash)) dan jalankan:
 
 | Arahan | Output dijangka (contoh) | Jika gagal |
 |--------|--------------------------|------------|
@@ -119,7 +167,7 @@ Bilik latihan mungkin tiada internet yang stabil. Siapkan langkah di bawah **di 
 ### 4.1 Salin repo
 
 1. Dapatkan folder `kursus-javascript-pgn-5-hari/` daripada jurulatih (USB / pemacu kongsi / `git clone`).
-2. Letakkan di laluan **pendek tanpa ruang**, contohnya `C:\latihan\kursus-javascript-pgn-5-hari` atau `~/latihan/kursus-javascript-pgn-5-hari`.
+2. Letakkan di laluan **pendek tanpa ruang**, contohnya `C:\latihan\kursus-javascript-pgn-5-hari` (dalam Git Bash: `/c/latihan/kursus-javascript-pgn-5-hari`) atau `~/latihan/kursus-javascript-pgn-5-hari`.
    > ⚠️ Elakkan folder OneDrive yang di-sync. `node_modules` mengandungi ribuan fail kecil dan proses sync boleh mengunci fail semasa `npm`.
 
 ### 4.2 Pasang `node_modules` sebelum kursus
@@ -182,9 +230,16 @@ curl http://localhost:3000/api/kesihatan
 # {"ok":true,"masa":"2026-09-28T09:00:00+08:00"}   ← nilai masa akan berbeza
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+Invoke-RestMethod http://localhost:3000/api/kesihatan
+# dipapar sebagai jadual: ok = True, masa = 2026-09-28T09:00:00+08:00 (nilai masa berbeza)
+```
+
 Atau buka <http://localhost:3000/api/kesihatan> dalam browser. Untuk memulihkan data asal selepas lab: `npm run reset-data` (dalam `projek/api`).
 
-> 💡 Windows PowerShell lama: `curl` ialah alias kepada `Invoke-WebRequest`. Guna `curl.exe http://localhost:3000/api/kesihatan` atau buka URL dalam browser.
+> 💡 **Windows:** dalam **Git Bash**, `curl` di atas berfungsi terus. Dalam Windows PowerShell, `curl` ialah alias kepada `Invoke-WebRequest` (bukan curl sebenar, pilihan berbeza): guna blok PowerShell di atas, `curl.exe http://localhost:3000/api/kesihatan`, atau buka URL dalam browser. Arahan `curl` dengan badan JSON (`-d '{…}'`) hanya untuk Git Bash. Dalam PowerShell guna versi `Invoke-RestMethod` yang disediakan dalam nota.
 
 ---
 
@@ -208,6 +263,12 @@ Jika proksi memintas TLS dengan sijil dalaman (error `SELF_SIGNED_CERT_IN_CHAIN`
 npm config set cafile "C:\\sijil\\ca-jabatan.pem"
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+npm config set cafile "C:\sijil\ca-jabatan.pem"     # PowerShell: satu \ sahaja
+```
+
 > ⚠️ **Awas — `npm config set strict-ssl false`.** Arahan ini **mematikan semakan sijil TLS** untuk semua muat turun npm dan membuka ruang serangan *man-in-the-middle*. Guna **hanya** sebagai langkah sementara dengan kebenaran IT, kemudian pulihkan dengan `npm config set strict-ssl true`. Cara yang betul ialah `cafile`.
 
 ---
@@ -216,8 +277,8 @@ npm config set cafile "C:\\sijil\\ca-jabatan.pem"
 
 | Gejala | Punca | Penyelesaian |
 |--------|-------|--------------|
-| `Port 3000 sedang digunakan…` / `EADDRINUSE :::3000` | Port 3000 sudah digunakan (server lama masih berjalan, atau aplikasi lain) | Tutup terminal lama (`Ctrl+C`). Cari proses: macOS/Linux `lsof -i :3000`; Windows `netstat -ano \| findstr :3000` → `taskkill /PID <pid> /F`. Jalan terakhir: `PORT=3001 npm start` (Windows cmd: `set PORT=3001 && npm start`), kemudian tukar URL API aplikasi (`VITE_API_URL`) ke `:3001` |
-| PowerShell: `npm.ps1 cannot be loaded because running scripts is disabled on this system` | *Execution policy* Windows menyekat skrip `.ps1` | Guna **Command Prompt** (`cmd`) sebagai terminal VS Code, **atau** (dengan kebenaran IT) `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
+| `Port 3000 sedang digunakan…` / `EADDRINUSE :::3000` | Port 3000 sudah digunakan (server lama masih berjalan, atau aplikasi lain) | Tutup terminal lama (`Ctrl+C`). Cari proses: macOS/Linux `lsof -i :3000`; Windows `netstat -ano \| findstr :3000` → `taskkill /PID <pid> /F`. Jalan terakhir: `PORT=3001 npm start` (Git Bash; PowerShell: `$env:PORT = "3001"; npm start`; cmd: `set PORT=3001 && npm start`), kemudian tukar URL API aplikasi (`VITE_API_URL`) ke `:3001` |
+| PowerShell: `npm.ps1 cannot be loaded because running scripts is disabled on this system` | *Execution policy* Windows menyekat skrip `.ps1` | Guna **Git Bash** sebagai terminal VS Code ([§2.5](#25-terminal-vs-code-di-windows--git-bash)) atau **Command Prompt** (`cmd`), **atau** (dengan kebenaran IT) `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | `'node' is not recognized…` / `command not found: node` | `PATH` belum dikemas kini | Tutup & buka semula VS Code/terminal; log keluar/masuk Windows |
 | Konsol: `Access to script at 'file:///…/main.js' from origin 'null' has been blocked by CORS policy` | Membuka HTML terus dengan `file://`; modul ES (`type="module"`) **tidak** dibenarkan dari `file://` | Klik kanan HTML → **Open with Live Server** (`http://127.0.0.1:5500/…`) |
 | Konsol: `Failed to fetch` / `net::ERR_CONNECTION_REFUSED` ke `localhost:3000` | Mock API tidak berjalan | `cd projek/api && npm start` |

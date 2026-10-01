@@ -4,6 +4,8 @@
 
 > **Peraturan lab:** Hari ini **dua terminal** sentiasa terbuka — **A**: mock API (`npm start`, jangan tutup), **B**: latihan. Dan **DevTools → Network** sentiasa terbuka bila menggunakan browser. Setiap kali sesuatu "tidak berfungsi", lihat tiga tempat mengikut tertib: (1) log terminal A, (2) tab Network, (3) Console.
 
+> 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
+
 | Lab | Sesi | Fail | Hasil |
 |-----|------|------|-------|
 | 2.1 | S1 9.00–11.00 | `latihan-01.js`, `latihan-02.js`, `curl` / Thunder Client | Event loop diramal; callback hell dirasai; HTTP & CORS diperhati secara langsung |
@@ -113,7 +115,7 @@
 
    Buka <http://localhost:5500/> → penunjuk mesti **🟢 Mock API hidup**.
 
-9. **`curl` — baca** (Windows: `curl.exe` dalam Git Bash):
+9. **`curl` — baca** (Windows: jalankan dalam Git Bash, atau guna blok PowerShell di bawah):
 
    ```bash
    curl -i http://localhost:3000/api/kesihatan
@@ -121,6 +123,18 @@
    curl -i http://localhost:3000/api/laporan/LPR-9999
    curl -i "http://localhost:3000/api/kesihatan?gagal=1"
    curl -s -o /dev/null -w "%{http_code} %{time_total}s\n" "http://localhost:3000/api/kesihatan?lambat=1500"
+   ```
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   $r = Invoke-WebRequest -UseBasicParsing http://localhost:3000/api/kesihatan
+   $r.StatusCode; $r.Headers['Content-Type']; $r.Content
+   Invoke-RestMethod "http://localhost:3000/api/laporan?status=baharu&had=2"
+   # 4xx/5xx: Windows PowerShell membaling ralat, jadi tangkap untuk melihat kod status & badan
+   try { Invoke-WebRequest -UseBasicParsing http://localhost:3000/api/laporan/LPR-9999 } catch { $_.Exception.Response.StatusCode.value__; $_.Exception.Response.ContentType; $_.ErrorDetails.Message }
+   try { Invoke-WebRequest -UseBasicParsing "http://localhost:3000/api/kesihatan?gagal=1" } catch { $_.Exception.Response.StatusCode.value__; $_.Exception.Response.ContentType; $_.ErrorDetails.Message }
+   (Measure-Command { Invoke-WebRequest -UseBasicParsing "http://localhost:3000/api/kesihatan?lambat=1500" }).TotalSeconds
    ```
 
    Untuk setiap satu, catat **kod status** dan **Content-Type**.
@@ -147,6 +161,30 @@
     curl -i -X DELETE http://localhost:3000/api/laporan/LPR-0041 -H "X-API-Key: latihan-pgn-2026"
     ```
 
+    **Windows (PowerShell):**
+
+    ```powershell
+    $url   = 'http://localhost:3000/api/laporan'
+    $kunci = @{ 'X-API-Key' = 'latihan-pgn-2026' }
+    $jenis = 'application/json; charset=utf-8'
+    $badan = @{ tajuk = 'Ujian curl — longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
+
+    # Tanpa kunci → ?
+    try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri $url -ContentType $jenis -Body $badan } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }
+
+    # Dengan kunci → 201. Salin ID dari respons (cth LPR-0041)
+    $r = Invoke-WebRequest -UseBasicParsing -Method Post -Uri $url -Headers $kunci -ContentType $jenis -Body $badan
+    $r.StatusCode; $r.Headers['Location']; $r.Content
+
+    # Gantikan LPR-0041 dengan ID anda
+    $r = Invoke-WebRequest -UseBasicParsing -Method Patch -Uri "$url/LPR-0041" -Headers $kunci -ContentType $jenis `
+      -Body (@{ status = 'selesai' } | ConvertTo-Json -Depth 10)
+    $r.StatusCode; $r.Content
+
+    $r = Invoke-WebRequest -UseBasicParsing -Method Delete -Uri "$url/LPR-0041" -Headers $kunci
+    $r.StatusCode    # 204
+    ```
+
 11. **Thunder Client / Postman** — ulang langkah 10 secara grafik:
     - *New Request* → `POST` → `http://localhost:3000/api/laporan`
     - Tab **Headers**: `X-API-Key` = `latihan-pgn-2026`
@@ -161,6 +199,17 @@
       -H "Origin: http://localhost:5500" \
       -H "Access-Control-Request-Method: POST" \
       -H "Access-Control-Request-Headers: content-type,x-api-key"
+    ```
+
+    **Windows (PowerShell):**
+
+    ```powershell
+    $r = Invoke-WebRequest -UseBasicParsing -Method Options -Uri http://localhost:3000/api/laporan -Headers @{
+      'Origin'                         = 'http://localhost:5500'
+      'Access-Control-Request-Method'  = 'POST'
+      'Access-Control-Request-Headers' = 'content-type,x-api-key'
+    }
+    $r.StatusCode; $r.Headers
     ```
 
     Cari tiga header `Access-Control-Allow-*` dalam response.

@@ -4,6 +4,8 @@
 
 > **Peraturan lab:** Setiap latihan mencetak semakan ✅/❌ di **Console** (F12). Sasaran: semua ✅. Tulis kod sendiri dahulu, dan tanya jurulatih atau pasangan anda hanya selepas mencuba 10 minit.
 
+> 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
+
 | Lab | Sesi | Latihan | Hasil |
 |-----|------|---------|-------|
 | 3.0 | S1 (awal) | Persediaan | Mock API `:3000` + server latihan `:5500` berjalan |
@@ -55,7 +57,7 @@ Menghidupkan mock API dan server statik latihan; memahami kenapa `file://` tidak
 
 | Gejala | Punca | Penyelesaian |
 |--------|-------|--------------|
-| `EADDRINUSE :3000` / `:5500` | Port digunakan (mungkin server semalam) | Tutup terminal lama, atau `PORT=3001 npm start` / `PORT=5501 node serve.mjs` (jika API di 3001, ubah `API_URL` dalam `services/api.js`) |
+| `EADDRINUSE :3000` / `:5500` | Port digunakan (mungkin server semalam) | Tutup terminal lama, atau `PORT=3001 npm start` / `PORT=5501 node serve.mjs` (PowerShell: `$env:PORT=3001; npm start`) (jika API di 3001, ubah `API_URL` dalam `services/api.js`) |
 | Lencana **API tiada** | Mock API tidak berjalan / firewall | Semak Terminal 1; buka `http://localhost:3000/api/kesihatan` terus |
 | Halaman kosong, error `Failed to load module script` | Dibuka melalui `file://` atau folder salah | Jalankan `node serve.mjs` **dari dalam** `projek/latihan/hari-3` |
 

@@ -37,6 +37,20 @@ cp .env.example .env             # VITE_API_URL=http://localhost:3000
 npm run dev
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+# Terminal 1 — mock API (http://localhost:3000)
+cd projek/api
+npm start
+
+# Terminal 2 — aplikasi GeoLapor (http://localhost:5173)
+cd projek/geolapor-mula
+npm install
+Copy-Item .env.example .env      # VITE_API_URL=http://localhost:3000
+npm run dev
+```
+
 Perintah lain dalam `geolapor-mula/`:
 
 ```bash

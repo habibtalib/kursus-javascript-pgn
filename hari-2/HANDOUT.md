@@ -872,6 +872,61 @@ curl -s -i -X OPTIONS http://localhost:3000/api/laporan \
   -H "Access-Control-Request-Headers: content-type,x-api-key"
 ```
 
+**Windows (PowerShell):**
+
+```powershell
+$api   = 'http://localhost:3000'
+$kunci = @{ 'X-API-Key' = 'latihan-pgn-2026' }
+$jenis = 'application/json; charset=utf-8'
+# Nota: untuk 4xx/5xx Windows PowerShell membaling ralat → try { … } catch { kod status; badan }
+
+# Kesihatan
+Invoke-RestMethod "$api/api/kesihatan"
+
+# Kategori & layer
+Invoke-RestMethod "$api/api/kategori"
+Invoke-RestMethod "$api/api/lapisan"
+(Invoke-WebRequest -UseBasicParsing "$api/api/lapisan/sempadan-zon").Content.Substring(0, 300)
+
+# Senarai dengan penapis (petik URL — & juga aksara khas dalam PowerShell)
+Invoke-RestMethod "$api/api/laporan?kategori=infrastruktur&status=baharu&had=5&mula=0"
+Invoke-RestMethod "$api/api/laporan?bbox=101.66,2.90,101.72,2.95"
+Invoke-RestMethod "$api/api/laporan" -Body @{ q = 'papan tanda' }   # GET + -Body hashtable → query string dikodkan
+
+# Satu laporan + 404
+$r = Invoke-WebRequest -UseBasicParsing "$api/api/laporan/LPR-0001"; $r.StatusCode; $r.Content
+try { Invoke-WebRequest -UseBasicParsing "$api/api/laporan/LPR-9999" } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }   # → 404 {"ralat": "…"}
+
+# Cipta — tanpa key (401), tidak sah (422), sah (201)
+$tanpaKunci = @{ tajuk = 'Ujian curl'; kategori = 'utiliti'; catatan = ''; lat = 2.9264; lng = 101.6958 } | ConvertTo-Json -Depth 10
+$tidakSah   = @{ tajuk = ''; kategori = 'bukan-kategori'; lat = 101.6958; lng = 2.9264 } | ConvertTo-Json -Depth 10
+$sah        = @{ tajuk = 'Ujian curl'; kategori = 'utiliti'; catatan = 'Dari terminal'; lat = 2.9264; lng = 101.6958 } | ConvertTo-Json -Depth 10
+try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri "$api/api/laporan" -ContentType $jenis -Body $tanpaKunci } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }
+try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri "$api/api/laporan" -Headers $kunci -ContentType $jenis -Body $tidakSah } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }
+$r = Invoke-WebRequest -UseBasicParsing -Method Post -Uri "$api/api/laporan" -Headers $kunci -ContentType $jenis -Body $sah
+$r.StatusCode; $r.Headers['Location']; $r.Content
+
+# Kemas kini status & padam (ganti LPR-0041 dengan id yang dipulangkan di atas)
+Invoke-RestMethod -Method Patch -Uri "$api/api/laporan/LPR-0041" -Headers $kunci -ContentType $jenis `
+  -Body (@{ status = 'dalam-tindakan' } | ConvertTo-Json -Depth 10)
+(Invoke-WebRequest -UseBasicParsing -Method Delete -Uri "$api/api/laporan/LPR-0041" -Headers $kunci).StatusCode   # → 204
+
+# Statistik
+Invoke-RestMethod "$api/api/statistik"
+
+# Mod pengajaran: kependaman & kegagalan
+"masa: {0}s" -f (Measure-Command { Invoke-WebRequest -UseBasicParsing "$api/api/laporan?lambat=2000" }).TotalSeconds
+try { Invoke-WebRequest -UseBasicParsing "$api/api/laporan?gagal=1" } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }   # → 500
+
+# Lihat preflight CORS seperti browser
+$r = Invoke-WebRequest -UseBasicParsing -Method Options -Uri "$api/api/laporan" -Headers @{
+  'Origin'                         = 'http://localhost:5173'
+  'Access-Control-Request-Method'  = 'POST'
+  'Access-Control-Request-Headers' = 'content-type,x-api-key'
+}
+$r.StatusCode; $r.Headers
+```
+
 | Pilihan `curl` | Maksud |
 |----------------|--------|
 | `-s` | Senyap (tiada bar kemajuan) |

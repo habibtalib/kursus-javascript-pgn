@@ -405,7 +405,21 @@ curl -i -X POST http://localhost:3000/api/laporan \
 # Location: /api/laporan/LPR-0041
 ```
 
-> ⚠️ **Windows:** Dalam PowerShell 5, `curl` ialah alias kepada `Invoke-WebRequest` (sintaks berbeza). Taip **`curl.exe`**, atau guna **Git Bash**. Petikan tunggal `'{…}'` tidak berfungsi dalam `cmd.exe` — guna Git Bash atau Thunder Client untuk POST.
+**Windows (PowerShell):**
+
+```powershell
+$r = Invoke-WebRequest -UseBasicParsing http://localhost:3000/api/kesihatan     # Invoke-WebRequest: ada status + header
+$r.StatusCode; $r.Headers
+Invoke-RestMethod "http://localhost:3000/api/laporan?status=baharu&had=2"     # petik URL yang ada &
+
+$badan = @{ tajuk = 'Ujian curl — longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
+$r = Invoke-WebRequest -UseBasicParsing -Method Post -Uri http://localhost:3000/api/laporan `
+  -Headers @{ 'X-API-Key' = 'latihan-pgn-2026' } `
+  -ContentType 'application/json; charset=utf-8' -Body $badan
+$r.StatusCode; $r.Headers['Location']     # 201 · /api/laporan/LPR-0041
+```
+
+> ⚠️ **Windows:** Dalam PowerShell 5, `curl` ialah alias kepada `Invoke-WebRequest` (sintaks berbeza). Guna **Git Bash** (disyorkan), taip **`curl.exe`** untuk GET, atau guna blok PowerShell di atas (`Invoke-WebRequest`/`Invoke-RestMethod`). Petikan tunggal `'{…}'` tidak berfungsi dalam `cmd.exe`, dan PowerShell 5 membuang `"` dalam argumen `curl.exe` — untuk POST guna Git Bash, blok PowerShell atau Thunder Client.
 
 **Thunder Client** (sambungan VS Code) / **Postman** — klien grafik: pilih method, URL, tab *Headers*, tab *Body → JSON*, klik *Send*. Simpan request dalam **Collection** "GeoLapor" untuk digunakan semula sepanjang kursus.
 
