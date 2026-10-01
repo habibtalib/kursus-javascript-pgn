@@ -17,6 +17,12 @@
 
 ## Lab 5.1 — Store berpusat, selector, URL & optimistic update (S1)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - State vs props, reactivity: B3 · Bab 3 (Building React Components) — ms. 300–304 (**PDF 324–328**)
+> - Store pub/sub (`subscribe`, `set`, `update`): B5 · Bab 6 (Advanced Svelte Reactivity) — ms. 483–490 (**PDF 507–514**)
+> - Keadaan terbitan: B4 · Bab 4 (Using Data and Reactivity) — ms. 405–408 (**PDF 429–432**)
+
 ### 🎯 Objektif
 - Membina `ciptaStore` dan membuktikannya dengan 5 ujian `node --test`.
 - Memindahkan data laporan, penapis dan pilihan ke **satu** store.
@@ -235,6 +241,12 @@ Pasang `pasangNotis` ([README §2.3](./README.md#23-komponen-sebagai-fungsi)) pa
 
 ## Lab 5.2 — Susun layer & prestasi peta (S2)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Komponen & komposisi: B3 · Bab 3 (Building React Components) — ms. 298–300, 321–325 (**PDF 322–324, 345–349**)
+> - React, Vue, Svelte — perbandingan: B3 · Bab 1; B4 · Bab 1; B5 · Bab 1 — ms. 264–271, 343–344, 423–425 (**PDF 288–295, 367–368, 447–449**)
+> - Node.js secara ringkas: B7 · Bab 1 (Node.js Fundamentals) — ms. 560–562, 566–567 (**PDF 584–586, 590–591**)
+
 ### 🎯 Objektif
 - Menyusun `src/` kepada `ui/ · state/ · services/ · io/ · utils/` mengikut [README §2.2](./README.md#22-struktur-folder-geolapor-akhir).
 - **Menguatkuasakan** arah dependency dengan ESLint (bukan hanya dengan niat baik).
@@ -365,6 +377,12 @@ test('debounce: hanya panggilan terakhir dijalankan', (t) => {
 ---
 
 ## Lab 5.3 — Debugging, ujian & persediaan demo (S3)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Debugging (breakpoint, watch): B6 · Bab 3 (Testing Your JavaScript) — ms. 542–547 (**PDF 566–571**)
+> - Ujian unit: B6 · Bab 3 (Testing Your JavaScript) — ms. 547–553 (**PDF 571–577**)
+> - Objek `Error`, `try…catch`, handler: B7 · Bab 7 (Error Handling and Debugging) — ms. 653–660 (**PDF 677–684**)
 
 ### 🎯 Objektif
 - Mengesan 4 pepijat tanaman menggunakan DevTools (bukan meneka).

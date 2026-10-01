@@ -315,6 +315,17 @@ Vite memecahkan pustaka yang diimport secara dinamik kepada *chunk* berasingan �
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Template literal, string method** — B1 · Bab 3 (Using Data), *String data type* — ms. 69–73 (**PDF 93–97**)
+> - **Destructuring & spread array** — B1 · Bab 6 (Using Arrays), *Destructuring Arrays; Spreading Arrays* — ms. 122–123 (**PDF 146–147**)
+> - **Salin objek dengan spread** — B1 · Bab 7 (Making and Using Objects), *Comparing and Copying Objects* — ms. 132–134 (**PDF 156–158**)
+> - **ES Modules `import`/`export`** — B1 · Bab 12 (Using JavaScript Modules), *Keseluruhan bab* — ms. 223–229 (**PDF 247–253**)
+> - **`import()` dinamik** — B1 · Bab 12 (Using JavaScript Modules), *Loading Dynamic Modules* — ms. 229 (**PDF 253**)
+
+
 ## Rujukan rasmi
 
 - MDN — Template literals: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>

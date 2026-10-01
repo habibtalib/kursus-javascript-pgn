@@ -630,6 +630,16 @@ try {
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **HTTP & CORS** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Introducing HTTP; Making requests with CORS* — ms. 216–220 (**PDF 240–244**)
+> - **`fetch`, Response, error, opsyen (method, header, body)** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Using AJAX; Getting data with the Fetch API* — ms. 210–216 (**PDF 234–240**)
+> - **JSON hantar & terima** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Working with JSON data* — ms. 220–222 (**PDF 244–246**)
+> - **POST JSON** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Sending JSON data* — ms. 222 (**PDF 246**)
+
+
 ## Rujukan rasmi
 
 - MDN — HTTP overview: <https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview>

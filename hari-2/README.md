@@ -52,6 +52,12 @@ Klien meminta secara khusus: **"Berkaitan dengan API — banyakkan."** Sebabnya 
 
 ## S1 — Asynchronous Programming Concepts (9.00 – 11.00 pagi)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Call stack, queue, event loop** — B1 · Bab 10 (Making Things Happen with Events), *Understanding the JavaScript Runtime Model; The Event Loop* — ms. 182–184 (**PDF 206–208**)
+> - **Sync vs async, callback** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Understanding Asynchronous JavaScript* — ms. 198–202 (**PDF 222–226**)
+> - **HTTP & CORS** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Introducing HTTP; Making requests with CORS* — ms. 216–220 (**PDF 240–244**)
+
 ### 1.1 Sync vs async
 
 JavaScript di browser berjalan pada **satu utas** (*single thread*): ia hanya boleh melakukan **satu perkara pada satu masa**. Jika satu tugas mengambil 5 saat, **segala-galanya** menunggu — klik, skrol, animasi peta.
@@ -407,6 +413,11 @@ curl -i -X POST http://localhost:3000/api/laporan \
 
 ## S2 — Promise Handling (11.00 pagi – 1.00 tgh)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Mencipta & chaining Promise** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Making Promises* — ms. 202–206 (**PDF 226–230**)
+> - **`.catch`, rejection yang tidak di-handle** — B7 · Bab 7 (Error Handling and Debugging), *Catching exceptions with promises* — ms. 656–659 (**PDF 680–683**)
+
 ### 2.1 Apa itu Promise?
 
 **Promise** ialah objek yang mewakili **hasil masa depan** sesuatu operasi async — seperti nombor giliran di kaunter. Ia sentiasa dalam **satu** daripada tiga keadaan:
@@ -587,6 +598,11 @@ Promise yang di-reject tanpa `.catch` menghasilkan amaran merah dalam Console (`
 
 ## S3 — Async / Await Syntax (2.30 – 3.30 ptg)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **`async`/`await`** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Introducing async functions* — ms. 206–210 (**PDF 230–234**)
+> - **Jenis error, `try…catch` dalam fungsi async** — B7 · Bab 7 (Error Handling and Debugging), *Knowing the Types of Errors; Catching exceptions with async functions* — ms. 651–653, 659–660 (**PDF 675–677, 683–684**)
+
 ### 3.1 `async` & `await` — Promise yang dibaca seperti kod sync
 
 - Fungsi `async` **sentiasa memulangkan Promise**.
@@ -709,6 +725,11 @@ function kelaskan(e) {
 ---
 
 ## S4 — Fetch API Integration (3.30 – 5.00 ptg)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **`fetch`, Response, error, opsyen (method, header, body)** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Using AJAX; Getting data with the Fetch API* — ms. 210–216 (**PDF 234–240**)
+> - **JSON hantar & terima** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Working with JSON data* — ms. 220–222 (**PDF 244–246**)
 
 ### 4.1 Pilihan `fetch(url, opsyen)`
 

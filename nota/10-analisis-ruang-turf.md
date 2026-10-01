@@ -286,6 +286,11 @@ test('bboxDari sepadan dengan turf.bbox', () => {
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) tidak mempunyai bab tentang topik ini. Guna nota ini dan rujukan rasmi di bawah.
+
+
 ## Rujukan rasmi
 
 - Turf.js (dokumentasi & senarai modul): <https://turfjs.org/>

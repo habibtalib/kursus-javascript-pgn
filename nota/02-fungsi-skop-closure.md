@@ -328,6 +328,14 @@ Fungsi tulen mudah **diuji** (`assert.deepEqual(denganLaporan([], f), [f])`), mu
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Fungsi, parameter default/rest, arrow function, hoisting** — B1 · Bab 8 (Writing and Running Functions), *Functions: An Introduction; Writing Functions; Declaring Anonymous functions* — ms. 140–154 (**PDF 164–178**)
+> - **`let`/`const`, jenis data, scope** — B1 · Bab 3 (Using Data), *Making Variables with let; Making Constants with const; Taking a Look at the Data Types; Getting a Handle on Scope* — ms. 63–80 (**PDF 87–104**)
+
+
 ## Rujukan rasmi
 
 - MDN — Functions (guide): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions>

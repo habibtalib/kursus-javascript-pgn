@@ -15,6 +15,12 @@
 
 ## Lab 2.1 — Konsep Async, Mock API & HTTP (S1)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Call stack, queue, event loop: B1 · Bab 10 (Making Things Happen with Events) — ms. 182–184 (**PDF 206–208**)
+> - Sync vs async, callback: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 198–202 (**PDF 222–226**)
+> - HTTP & CORS: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 216–220 (**PDF 240–244**)
+
 ### 🎯 Objektif
 - Meramal susunan output event loop dan menerangkan dengan 3 peraturan (O1)
 - Menulis callback dan mengalami masalah callback hell
@@ -201,6 +207,11 @@
 ---
 
 ## Lab 2.2 — Promise Handling & 3 Layer GeoJSON (S2)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Mencipta & chaining Promise: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 202–206 (**PDF 226–230**)
+> - `.catch`, rejection yang tidak di-handle: B7 · Bab 7 (Error Handling and Debugging) — ms. 656–659 (**PDF 680–683**)
 
 ### 🎯 Objektif
 Mencipta Promise, meratakan callback hell dengan chaining, menggunakan `fetch` sebagai Promise, dan memilih kombinator yang betul untuk memuat layer `sempadan-zon`, `sungai`, `kemudahan` (O3).
@@ -453,6 +464,11 @@ E2 ❌ AggregateError 2 ralat
 
 ## Lab 2.3 — Async/Await, Loading State & Jenis Error (S3)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - `async`/`await`: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 206–210 (**PDF 230–234**)
+> - Jenis error, `try…catch` dalam fungsi async: B7 · Bab 7 (Error Handling and Debugging) — ms. 651–653, 659–660 (**PDF 675–677, 683–684**)
+
 ### 🎯 Objektif
 Menulis semula kod Promise dengan `async/await`, mengurus keadaan loading dengan `try…catch…finally`, membandingkan sequential vs parallel, dan mengelaskan 4 jenis error (O4).
 
@@ -579,6 +595,11 @@ E1 forEach "selesai" dalam ≈0 ms — tetapi fetch belum siap!
 ---
 
 ## Lab 2.4 — Fetch API Integration → `services/api.js` (S4)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - `fetch`, Response, error, opsyen (method, header, body): B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 210–216 (**PDF 234–240**)
+> - JSON hantar & terima: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 220–222 (**PDF 244–246**)
 
 ### 🎯 Objektif
 Menggunakan `fetch` untuk operasi tulis (POST/PATCH/DELETE) dengan header yang betul, mengendali 401/422/204, membatalkan request (O5), dan membina modul **`services/api.js`** yang lulus 10/10 ujian (O6).

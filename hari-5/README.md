@@ -76,6 +76,12 @@ Selepas makan tengah hari, fokus bertukar daripada **membina** kepada **membukti
 
 ## S1 · State Management (9.00 – 11.00 pagi)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **State vs props, reactivity** — B3 · Bab 3 (Building React Components), *Recognizing the Two Types of Data* — ms. 300–304 (**PDF 324–328**)
+> - **Store pub/sub (`subscribe`, `set`, `update`)** — B5 · Bab 6 (Advanced Svelte Reactivity), *Constructing and Stocking the Store* — ms. 483–490 (**PDF 507–514**)
+> - **Keadaan terbitan** — B4 · Bab 4 (Using Data and Reactivity), *Computing Properties* — ms. 405–408 (**PDF 429–432**)
+
 ### 1.1 Apa itu "state"?
 
 **State (keadaan)** ialah semua data yang boleh berubah semasa aplikasi berjalan dan mempengaruhi apa yang dilihat pengguna.
@@ -537,6 +543,12 @@ penapis.value = { ...penapis.value, kategori: 'tanah' };
 
 ## S2 · Modern Frontend Architecture (11.00 tgh – 12.30 tgh)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Komponen & komposisi** — B3 · Bab 3 (Building React Components), *Thinking in Components; Composing Components* — ms. 298–300, 321–325 (**PDF 322–324, 345–349**)
+> - **React, Vue, Svelte — perbandingan** — B3 · Bab 1; B4 · Bab 1; B5 · Bab 1, *Distilling "Thinking in React" (B3); Comparing Vue to React (B4); What Makes Svelte Different? (B5)* — ms. 264–271, 343–344, 423–425 (**PDF 288–295, 367–368, 447–449**)
+> - **Node.js secara ringkas** — B7 · Bab 1 (Node.js Fundamentals), *Learning What Makes Node.js Tick; Recognizing What Node.js Is Good For* — ms. 560–562, 566–567 (**PDF 584–586, 590–591**)
+
 ### 2.1 Layer dan arah dependency
 
 ```mermaid
@@ -945,6 +957,12 @@ Browser menyekat `fetch` merentas asal (*origin*) melainkan server membalas deng
 ---
 
 ## S3 · Best Practices & Conclusion (3.00 – 4.30 ptg)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Debugging (breakpoint, watch)** — B6 · Bab 3 (Testing Your JavaScript), *Debugging in Chrome* — ms. 542–547 (**PDF 566–571**)
+> - **Ujian unit** — B6 · Bab 3 (Testing Your JavaScript), *Unit Testing* — ms. 547–553 (**PDF 571–577**)
+> - **Objek `Error`, `try…catch`, handler** — B7 · Bab 7 (Error Handling and Debugging), *Understanding Node.js's Error Object; Handling Exceptions* — ms. 653–660 (**PDF 677–684**)
 
 ### 3.1 Debugging bersistem
 

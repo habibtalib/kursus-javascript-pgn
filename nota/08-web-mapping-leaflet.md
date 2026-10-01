@@ -452,6 +452,11 @@ Untuk Hari 1–3 (tanpa bundler), salin daripada `node_modules/leaflet/dist/` (a
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) tidak mempunyai bab tentang topik ini. Guna nota ini dan rujukan rasmi di bawah.
+
+
 ## Rujukan rasmi
 
 - Leaflet — Rujukan API: <https://leafletjs.com/reference.html>

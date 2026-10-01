@@ -321,6 +321,14 @@ Amalan disyorkan:
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Pilihan storage browser (gambaran)** — B2 · Bab 1 (What a Web Browser Does), *Data storage* — ms. 239–240 (**PDF 263–264**)
+> - **`localStorage` sebagai property `window`** — B2 · Bab 2 (Programming the Browser), *Window properties* — ms. 247–248 (**PDF 271–272**)
+
+
 ## Rujukan rasmi
 
 - MDN — Web Storage API: <https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API> · `localStorage`: <https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage>

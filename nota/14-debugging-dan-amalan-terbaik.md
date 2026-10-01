@@ -448,6 +448,16 @@ Content-Security-Policy: default-src 'self'; img-src 'self' data: https://tile.o
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Debugging (breakpoint, watch)** — B6 · Bab 3 (Testing Your JavaScript), *Debugging in Chrome* — ms. 542–547 (**PDF 566–571**)
+> - **Ujian unit** — B6 · Bab 3 (Testing Your JavaScript), *Unit Testing* — ms. 547–553 (**PDF 571–577**)
+> - **Objek `Error`, `try…catch`, handler** — B7 · Bab 7 (Error Handling and Debugging), *Understanding Node.js's Error Object; Handling Exceptions* — ms. 653–660 (**PDF 677–684**)
+> - **Jenis error, `try…catch` dalam fungsi async** — B7 · Bab 7 (Error Handling and Debugging), *Knowing the Types of Errors; Catching exceptions with async functions* — ms. 651–653, 659–660 (**PDF 675–677, 683–684**)
+
+
 ## Rujukan rasmi
 
 - Chrome DevTools — Breakpoints: <https://developer.chrome.com/docs/devtools/javascript/breakpoints> · Network: <https://developer.chrome.com/docs/devtools/network> · Console API: <https://developer.chrome.com/docs/devtools/console/api>

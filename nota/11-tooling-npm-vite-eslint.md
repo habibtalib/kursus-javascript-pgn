@@ -346,6 +346,18 @@ Pasang sambungan **ESLint** (`dbaeumer.vscode-eslint`) dan **Prettier** (`esbenp
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **npm, `package.json`, semver, `scripts`** — B6 · Bab 1 (Building from Scratch), *Why You Need a Build Tool; Managing Dependencies with npm; Writing a dev Script* — ms. 496–506 (**PDF 520–530**)
+> - **Kenapa bundler, dev server, build, aset statik** — B6 · Bab 2 (Optimizing and Bundling), *Automating Your Build Script* — ms. 513–521 (**PDF 537–545**)
+> - **Projek Vite** — B3 · Bab 1 (Getting Started with React), *Initializing a Project with Vite* — ms. 271–278 (**PDF 295–302**)
+> - **ESLint** — B6 · Bab 3 (Testing Your JavaScript), *Using a Linter* — ms. 536–541 (**PDF 560–565**)
+> - **Prettier** — B1 · Bab 2 (Filling Your JavaScript Toolbox), *Getting prettier* — ms. 44–47 (**PDF 68–71**)
+> - **Konvensyen penamaan** — B1 · Bab 1 & Bab 3, *JavaScript programmers use camelCase and underscores (Bab 1); Naming variables; Naming constants (Bab 3)* — ms. 32–33, 66–67 (**PDF 56–57, 90–91**)
+
+
 ## Rujukan rasmi
 
 - npm — `package.json`: <https://docs.npmjs.com/cli/v11/configuring-npm/package-json> · `npm ci`: <https://docs.npmjs.com/cli/v11/commands/npm-ci> · `npm audit`: <https://docs.npmjs.com/cli/v11/commands/npm-audit> · Semver: <https://docs.npmjs.com/about-semantic-versioning> · <https://semver.org/>

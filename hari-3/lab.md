@@ -63,6 +63,11 @@ Menghidupkan mock API dan server statik latihan; memahami kenapa `file://` tidak
 
 ## Lab 3.1 — DOM Selection & Traversal (S1)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Apa itu DOM; bila skrip berjalan (`defer`, `async`): B2 · Bab 1 (What a Web Browser Does) — ms. 235–239 (**PDF 259–263**)
+> - Memilih elemen: B2 · Bab 2 (Programming the Browser) — ms. 249–254 (**PDF 273–278**)
+
 ### 🎯 Objektif
 Memilih elemen GeoLapor dengan `getElementById`, `querySelector(All)`, `form.elements`; merentas dengan `closest`, `parentElement`, `children`, `nextElementSibling`; membaca `dataset`; memahami `<template>`.
 
@@ -156,6 +161,10 @@ Memilih elemen GeoLapor dengan `getElementById`, `querySelector(All)`, `form.ele
 ---
 
 ## Lab 3.2 — DOM Element Manipulation + Peta Leaflet (S2)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Cipta & sisip elemen, `innerHTML`, `classList`, method elemen: B2 · Bab 2 (Programming the Browser) — ms. 254–257 (**PDF 278–281**)
 
 ### 🎯 Objektif
 (A) Merender senarai laporan dari API dengan selamat dan melihat sendiri kesan XSS. (B) Memaparkan laporan dan layer rujukan di peta Leaflet dengan `L.geoJSON`, popup selamat dan kawalan layer.
@@ -323,6 +332,10 @@ Memilih elemen GeoLapor dengan `getElementById`, `querySelector(All)`, `form.ele
 
 ## Lab 3.3 — Event Handling (S3)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - `addEventListener`, objek event, bubbling, event tersuai: B1 · Bab 10 (Making Things Happen with Events) — ms. 184–195 (**PDF 208–219**)
+
 ### 🎯 Objektif
 Menambah interaksi: tapisan (`change`), carian (`input` + debounce), delegasi klik pada senarai (zum/padam), klik peta → lat/lng, klik marker → sorot kad.
 
@@ -455,6 +468,11 @@ Menambah interaksi: tapisan (`change`), carian (`input` + debounce), delegasi kl
 ---
 
 ## Lab 3.4 — Form Handling (S4)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - `submit` & `preventDefault`: B1 · Bab 10 (Making Things Happen with Events) — ms. 195–196 (**PDF 219–220**)
+> - POST JSON: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 222 (**PDF 246**)
 
 ### 🎯 Objektif
 Membina aliran borang lengkap: validasi klien dengan mesej BM → `FormData` → POST JSON → 201 (peta dikemas kini) / 422 (error per medan).

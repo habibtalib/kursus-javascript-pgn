@@ -66,6 +66,14 @@ Dalam Console browser, taip `document.title = 'Saya di Hari 1'` dan perhatikan t
 
 ## Lab 1.1 — Asas → Moden: Variable, Jenis, Kawalan Aliran & GeoJSON Pertama (S1)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Cara menjalankan JS, `console`: B1 · Bab 1 (Jumping into JavaScript) — ms. 33–40 (**PDF 57–64**)
+> - `let`/`const`, jenis data, scope: B1 · Bab 3 (Using Data) — ms. 63–80 (**PDF 87–104**)
+> - Operator: B1 · Bab 4 (Working with Operators and Expressions) — ms. 83–90 (**PDF 107–114**)
+> - `if…else`, `switch`, loop: B1 · Bab 5 (Controlling Flow) — ms. 91–103 (**PDF 115–127**)
+> - Objek (asas GeoJSON): B1 · Bab 7 (Making and Using Objects) — ms. 125–131 (**PDF 149–155**)
+
 ### 🎯 Objektif
 - Memilih `const`/`let` dengan betul dan meramal `typeof` (O1)
 - Menulis `if…else`, `switch` dan empat jenis loop (O2)
@@ -266,6 +274,11 @@ E2 let 0 / 1 / 2
 
 ## Lab 1.2 — Modern Strings & Functions (S2)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Template literal, string method: B1 · Bab 3 (Using Data) — ms. 69–73 (**PDF 93–97**)
+> - Fungsi, parameter default/rest, arrow function, hoisting: B1 · Bab 8 (Writing and Running Functions) — ms. 140–154 (**PDF 164–178**)
+
 ### 🎯 Objektif
 - Membina teks dengan template literal & string method
 - Menulis fungsi dalam tiga bentuk dengan default parameter & rest
@@ -396,6 +409,12 @@ G1 [ '2.926, 101.696', '2.922, 101.650' ]
 
 ## Lab 1.3 — Destructuring & Operators (S3)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Destructuring & spread array: B1 · Bab 6 (Using Arrays) — ms. 122–123 (**PDF 146–147**)
+> - Salin objek dengan spread: B1 · Bab 7 (Making and Using Objects) — ms. 132–134 (**PDF 156–158**)
+> - Perbandingan ketat `===`: B1 · Bab 4 (Working with Operators and Expressions) — ms. 85–86 (**PDF 109–110**)
+
 ### 🎯 Objektif
 Mengekstrak dan mengemas kini data laporan dengan destructuring, spread/rest, `?.`, `??` dan `===` — tanpa mengubah data asal (O5).
 
@@ -518,6 +537,12 @@ G1 true false true false true
 ---
 
 ## Lab 1.4 — Modern Array Methods, JSON & ES Modules → `utils/geo.js` (S4)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - `map`/`filter`/`reduce` & method array lain: B1 · Bab 6 (Using Arrays) — ms. 112–121 (**PDF 136–145**)
+> - `JSON.parse` / `JSON.stringify`: B1 · Bab 11 (Writing Asynchronous JavaScript) — ms. 220–222 (**PDF 244–246**)
+> - ES Modules `import`/`export`: B1 · Bab 12 (Using JavaScript Modules) — ms. 223–229 (**PDF 247–253**)
 
 ### 🎯 Objektif
 Memproses `laporanContoh` dengan array method & JSON, kemudian membina dan menguji modul **`utils/geo.js`** mengikut API dikunci (O6).

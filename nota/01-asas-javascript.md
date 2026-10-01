@@ -409,6 +409,17 @@ Perhatikan `jumlah === 0 ? 0 : …` — tanpa kawalan ini, `0 / 0` memberi `NaN`
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Cara menjalankan JS, `console`** — B1 · Bab 1 (Jumping into JavaScript), *Running Code in the Console; Running Code in a Browser Window* — ms. 33–40 (**PDF 57–64**)
+> - **`let`/`const`, jenis data, scope** — B1 · Bab 3 (Using Data), *Making Variables with let; Making Constants with const; Taking a Look at the Data Types; Getting a Handle on Scope* — ms. 63–80 (**PDF 87–104**)
+> - **Operator** — B1 · Bab 4 (Working with Operators and Expressions), *Operators: The Lineup* — ms. 83–90 (**PDF 107–114**)
+> - **`if…else`, `switch`, loop** — B1 · Bab 5 (Controlling Flow), *Choosing a Path; Making Loops* — ms. 91–103 (**PDF 115–127**)
+> - **Konvensyen penamaan** — B1 · Bab 1 & Bab 3, *JavaScript programmers use camelCase and underscores (Bab 1); Naming variables; Naming constants (Bab 3)* — ms. 32–33, 66–67 (**PDF 56–57, 90–91**)
+
+
 ## Rujukan rasmi
 
 - MDN — JavaScript Guide: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide>

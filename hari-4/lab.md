@@ -17,6 +17,10 @@
 
 ## Lab 4.1 — Package Management (S1)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - npm, `package.json`, semver, `scripts`: B6 · Bab 1 (Building from Scratch) — ms. 496–506 (**PDF 520–530**)
+
 ### 🎯 Objektif
 Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`, `npx`, `audit`; memasang pakej GeoLapor; memadankan format → pakej.
 
@@ -164,6 +168,12 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
 ---
 
 ## Lab 4.2 — Module Bundlers & Build Tools + Format Geospatial (S2)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Kenapa bundler, dev server, build, aset statik: B6 · Bab 2 (Optimizing and Bundling) — ms. 513–521 (**PDF 537–545**)
+> - Projek Vite: B3 · Bab 1 (Getting Started with React) — ms. 271–278 (**PDF 295–302**)
+> - `import()` dinamik: B1 · Bab 12 (Using JavaScript Modules) — ms. 229 (**PDF 253**)
 
 ### 🎯 Objektif
 (A) Mencipta, menjalankan dan membina projek Vite 7. (B) Memindahkan GeoLapor Hari 3 ke `projek/geolapor-mula`. (C) Membaca/menulis GeoJSON, Shapefile (RSO → WGS84), GeoPackage, KML/KMZ. (D, lanjutan) GeoTIFF, LAS, Turf.
@@ -1101,6 +1111,12 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
 
 ## Lab 4.3 — Code Quality & Coding Standards (S3)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - ESLint: B6 · Bab 3 (Testing Your JavaScript) — ms. 536–541 (**PDF 560–565**)
+> - Prettier: B1 · Bab 2 (Filling Your JavaScript Toolbox) — ms. 44–47 (**PDF 68–71**)
+> - Konvensyen penamaan: B1 · Bab 1 & Bab 3 — ms. 32–33, 66–67 (**PDF 56–57, 90–91**)
+
 ### 🎯 Objektif
 Menjalankan ESLint 9 dan Prettier pada GeoLapor, memahami setiap peraturan dalam `eslint.config.js`, membaiki amaran sebenar, dan menyemak konvensyen penamaan.
 
@@ -1246,6 +1262,11 @@ Menjalankan ESLint 9 dan Prettier pada GeoLapor, memahami setiap peraturan dalam
 ---
 
 ## Lab 4.4 — Browser Storage (S4)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - Pilihan storage browser (gambaran): B2 · Bab 1 (What a Web Browser Does) — ms. 239–240 (**PDF 263–264**)
+> - `localStorage` sebagai property `window`: B2 · Bab 2 (Programming the Browser) — ms. 247–248 (**PDF 271–272**)
 
 ### 🎯 Objektif
 Melaksanakan `services/cache.js` (localStorage + IndexedDB), menyimpan penapis & draf borang, cache layer rujukan dengan TTL, dan menguji behaviour luar talian.

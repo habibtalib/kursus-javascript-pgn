@@ -372,6 +372,16 @@ const salin2 = structuredClone(feature);             // ✅ moden: kekalkan Date
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Objek (asas GeoJSON)** — B1 · Bab 7 (Making and Using Objects), *Objects: The Basics; Creating Objects; Modifying Objects* — ms. 125–131 (**PDF 149–155**)
+> - **`map`/`filter`/`reduce` & method array lain** — B1 · Bab 6 (Using Arrays), *Programming with Array Methods; Looping with Array Methods* — ms. 112–121 (**PDF 136–145**)
+> - **`JSON.parse` / `JSON.stringify`** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Working with JSON data* — ms. 220–222 (**PDF 244–246**)
+> - **JSON hantar & terima** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Working with JSON data* — ms. 220–222 (**PDF 244–246**)
+
+
 ## Rujukan rasmi
 
 - MDN — Working with objects: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects>

@@ -323,6 +323,18 @@ window.addEventListener('unhandledrejection', (e) => {
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Call stack, queue, event loop** — B1 · Bab 10 (Making Things Happen with Events), *Understanding the JavaScript Runtime Model; The Event Loop* — ms. 182–184 (**PDF 206–208**)
+> - **Sync vs async, callback** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Understanding Asynchronous JavaScript* — ms. 198–202 (**PDF 222–226**)
+> - **Mencipta & chaining Promise** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Making Promises* — ms. 202–206 (**PDF 226–230**)
+> - **`.catch`, rejection yang tidak di-handle** — B7 · Bab 7 (Error Handling and Debugging), *Catching exceptions with promises* — ms. 656–659 (**PDF 680–683**)
+> - **`async`/`await`** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Introducing async functions* — ms. 206–210 (**PDF 230–234**)
+> - **Jenis error, `try…catch` dalam fungsi async** — B7 · Bab 7 (Error Handling and Debugging), *Knowing the Types of Errors; Catching exceptions with async functions* — ms. 651–653, 659–660 (**PDF 675–677, 683–684**)
+
+
 ## Rujukan rasmi
 
 - MDN — Asynchronous JavaScript (pengenalan): <https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS>

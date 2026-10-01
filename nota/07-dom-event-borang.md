@@ -407,6 +407,17 @@ function notis(mesej, jenis = 'info') {
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **Apa itu DOM; bila skrip berjalan (`defer`, `async`)** — B2 · Bab 1 (What a Web Browser Does), *The Rendering Engine; Identifying and preventing render blocking; Unblocking your code with async and defer* — ms. 235–239 (**PDF 259–263**)
+> - **Memilih elemen** — B2 · Bab 2 (Programming the Browser), *Introducing the HTML DOM; Selecting element nodes* — ms. 249–254 (**PDF 273–278**)
+> - **Cipta & sisip elemen, `innerHTML`, `classList`, method elemen** — B2 · Bab 2 (Programming the Browser), *Creating and adding elements to the DOM; Element nodes; Element methods* — ms. 254–257 (**PDF 278–281**)
+> - **`addEventListener`, objek event, bubbling, event tersuai** — B1 · Bab 10 (Making Things Happen with Events), *Listening for Events* — ms. 184–195 (**PDF 208–219**)
+> - **`submit` & `preventDefault`** — B1 · Bab 10 (Making Things Happen with Events), *Preventing default actions* — ms. 195–196 (**PDF 219–220**)
+
+
 ## Rujukan rasmi
 
 - MDN — Introduction to the DOM: <https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction>

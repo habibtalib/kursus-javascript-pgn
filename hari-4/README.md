@@ -52,6 +52,10 @@ Permintaan klien secara literal: *"Convert/read/write file geospatial dalam bent
 
 ## S1 — Package Management (9.00 – 11.00 pagi)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **npm, `package.json`, semver, `scripts`** — B6 · Bab 1 (Building from Scratch), *Why You Need a Build Tool; Managing Dependencies with npm; Writing a dev Script* — ms. 496–506 (**PDF 520–530**)
+
 ### 1.1 npm dalam satu gambar
 
 ```mermaid
@@ -250,6 +254,12 @@ mindmap
 ---
 
 ## S2 — Module Bundlers & Build Tools (11.00 pagi – 1.00 tgh)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Kenapa bundler, dev server, build, aset statik** — B6 · Bab 2 (Optimizing and Bundling), *Automating Your Build Script* — ms. 513–521 (**PDF 537–545**)
+> - **Projek Vite** — B3 · Bab 1 (Getting Started with React), *Initializing a Project with Vite* — ms. 271–278 (**PDF 295–302**)
+> - **`import()` dinamik** — B1 · Bab 12 (Using JavaScript Modules), *Loading Dynamic Modules* — ms. 229 (**PDF 253**)
 
 ### 2.A.1 Kenapa perlu bundler?
 
@@ -810,6 +820,12 @@ pdal translate sampel.las sampel_4326.las reprojection --filters.reprojection.ou
 
 ## S3 — Code Quality & Coding Standards (2.30 – 3.30 ptg)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **ESLint** — B6 · Bab 3 (Testing Your JavaScript), *Using a Linter* — ms. 536–541 (**PDF 560–565**)
+> - **Prettier** — B1 · Bab 2 (Filling Your JavaScript Toolbox), *Getting prettier* — ms. 44–47 (**PDF 68–71**)
+> - **Konvensyen penamaan** — B1 · Bab 1 & Bab 3, *JavaScript programmers use camelCase and underscores (Bab 1); Naming variables; Naming constants (Bab 3)* — ms. 32–33, 66–67 (**PDF 56–57, 90–91**)
+
 ### 3.1 Linter vs formatter
 
 | | **ESLint** (linter) | **Prettier** (formatter) |
@@ -930,6 +946,11 @@ VS Code: pasang sambungan **ESLint** dan **Prettier**, kemudian `"editor.formatO
 ---
 
 ## S4 — Browser Storage (3.30 – 5.00 ptg)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Pilihan storage browser (gambaran)** — B2 · Bab 1 (What a Web Browser Does), *Data storage* — ms. 239–240 (**PDF 263–264**)
+> - **`localStorage` sebagai property `window`** — B2 · Bab 2 (Programming the Browser), *Window properties* — ms. 247–248 (**PDF 271–272**)
 
 ### 4.1 Pilihan storage
 

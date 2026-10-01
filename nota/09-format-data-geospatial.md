@@ -564,6 +564,11 @@ input.addEventListener('change', async () => {
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) tidak mempunyai bab tentang topik ini. Guna nota ini dan rujukan rasmi di bawah.
+
+
 ## Rujukan rasmi
 
 - RFC 7946 GeoJSON: <https://datatracker.ietf.org/doc/html/rfc7946>

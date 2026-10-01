@@ -765,6 +765,17 @@ Lebih lanjut tentang `node --test`: [nota 14](./14-debugging-dan-amalan-terbaik.
 
 ---
 
+## 📖 Bacaan buku
+
+> *JavaScript All-in-One For Dummies* (Minnick, 2023) — pengayaan selepas nota ini. Halaman PDF = muka surat cetak + 24.
+>
+> - **State vs props, reactivity** — B3 · Bab 3 (Building React Components), *Recognizing the Two Types of Data* — ms. 300–304 (**PDF 324–328**)
+> - **Store pub/sub (`subscribe`, `set`, `update`)** — B5 · Bab 6 (Advanced Svelte Reactivity), *Constructing and Stocking the Store* — ms. 483–490 (**PDF 507–514**)
+> - **Keadaan terbitan** — B4 · Bab 4 (Using Data and Reactivity), *Computing Properties* — ms. 405–408 (**PDF 429–432**)
+> - **Komponen & komposisi** — B3 · Bab 3 (Building React Components), *Thinking in Components; Composing Components* — ms. 298–300, 321–325 (**PDF 322–324, 345–349**)
+> - **React, Vue, Svelte — perbandingan** — B3 · Bab 1; B4 · Bab 1; B5 · Bab 1, *Distilling "Thinking in React" (B3); Comparing Vue to React (B4); What Makes Svelte Different? (B5)* — ms. 264–271, 343–344, 423–425 (**PDF 288–295, 367–368, 447–449**)
+
+
 ## Rujukan rasmi
 
 - MDN — `structuredClone`: <https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone> · `Array.prototype.toSorted`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted> · `Array.prototype.with`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with> · `Object.freeze`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze>

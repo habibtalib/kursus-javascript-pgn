@@ -53,6 +53,14 @@ Modul `utils/geo.js` yang anda tulis hari ini akan digunakan **tanpa perubahan**
 
 ## S1 — Variable Management & Scope: *asas → moden* (9.00 – 11.00 pagi)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Cara menjalankan JS, `console`** — B1 · Bab 1 (Jumping into JavaScript), *Running Code in the Console; Running Code in a Browser Window* — ms. 33–40 (**PDF 57–64**)
+> - **`let`/`const`, jenis data, scope** — B1 · Bab 3 (Using Data), *Making Variables with let; Making Constants with const; Taking a Look at the Data Types; Getting a Handle on Scope* — ms. 63–80 (**PDF 87–104**)
+> - **Operator** — B1 · Bab 4 (Working with Operators and Expressions), *Operators: The Lineup* — ms. 83–90 (**PDF 107–114**)
+> - **`if…else`, `switch`, loop** — B1 · Bab 5 (Controlling Flow), *Choosing a Path; Making Loops* — ms. 91–103 (**PDF 115–127**)
+> - **Objek (asas GeoJSON)** — B1 · Bab 7 (Making and Using Objects), *Objects: The Basics; Creating Objects; Modifying Objects* — ms. 125–131 (**PDF 149–155**)
+
 ### 1.1 JavaScript: apa, di mana, dan bagaimana ia berjalan
 
 JavaScript ialah bahasa pengaturcaraan **web**. HTML memberi struktur, CSS memberi rupa, JavaScript memberi **tingkah laku**: bertindak balas kepada klik, mengambil data dari server, melukis peta.
@@ -409,6 +417,11 @@ for (let j = 0; j < 3; j++) setTimeout(() => console.log(j), 0); // 0 1 2
 
 ## S2 — Modern Strings & Functions (11.00 pagi – 1.00 tgh)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Template literal, string method** — B1 · Bab 3 (Using Data), *String data type* — ms. 69–73 (**PDF 93–97**)
+> - **Fungsi, parameter default/rest, arrow function, hoisting** — B1 · Bab 8 (Writing and Running Functions), *Functions: An Introduction; Writing Functions; Declaring Anonymous functions* — ms. 140–154 (**PDF 164–178**)
+
 ### 2.1 Template literal
 
 Backtick `` ` `` membolehkan **interpolasi** `${ungkapan}` dan **berbilang baris**:
@@ -581,6 +594,12 @@ jarakKm([101.6958, 2.9264], [101.6505, 2.9223]).toFixed(2); // '5.05'  (Putrajay
 
 ## S3 — Destructuring & Operators (2.30 – 3.30 ptg)
 
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **Destructuring & spread array** — B1 · Bab 6 (Using Arrays), *Destructuring Arrays; Spreading Arrays* — ms. 122–123 (**PDF 146–147**)
+> - **Salin objek dengan spread** — B1 · Bab 7 (Making and Using Objects), *Comparing and Copying Objects* — ms. 132–134 (**PDF 156–158**)
+> - **Perbandingan ketat `===`** — B1 · Bab 4 (Working with Operators and Expressions), *Comparison operators* — ms. 85–86 (**PDF 109–110**)
+
 ### 3.1 Destructuring objek
 
 Destructuring = **membongkar** nilai dari objek/array ke variable dalam satu pernyataan.
@@ -723,6 +742,12 @@ Number.isNaN(x); // cara betul · Object.is(NaN, NaN) → true
 ---
 
 ## S4 — Modern Array Methods & ES Modules (3.30 – 5.00 ptg)
+
+> 📖 **Bacaan buku** — *JavaScript All-in-One For Dummies* (Minnick, 2023), pengayaan selepas sesi. Halaman PDF = muka surat cetak + 24.
+>
+> - **`map`/`filter`/`reduce` & method array lain** — B1 · Bab 6 (Using Arrays), *Programming with Array Methods; Looping with Array Methods* — ms. 112–121 (**PDF 136–145**)
+> - **`JSON.parse` / `JSON.stringify`** — B1 · Bab 11 (Writing Asynchronous JavaScript), *Working with JSON data* — ms. 220–222 (**PDF 244–246**)
+> - **ES Modules `import`/`export`** — B1 · Bab 12 (Using JavaScript Modules), *Keseluruhan bab* — ms. 223–229 (**PDF 247–253**)
 
 ### 4.1 Mengubah vs tidak mengubah (mutating vs non-mutating)
 
