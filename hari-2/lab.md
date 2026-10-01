@@ -167,7 +167,7 @@
     $url   = 'http://localhost:3000/api/laporan'
     $kunci = @{ 'X-API-Key' = 'latihan-pgn-2026' }
     $jenis = 'application/json; charset=utf-8'
-    $badan = @{ tajuk = 'Ujian curl — longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
+    $badan = @{ tajuk = 'Ujian curl - longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
 
     # Tanpa kunci → ?
     try { Invoke-WebRequest -UseBasicParsing -Method Post -Uri $url -ContentType $jenis -Body $badan } catch { $_.Exception.Response.StatusCode.value__; $_.ErrorDetails.Message }

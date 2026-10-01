@@ -412,7 +412,7 @@ $r = Invoke-WebRequest -UseBasicParsing http://localhost:3000/api/kesihatan     
 $r.StatusCode; $r.Headers
 Invoke-RestMethod "http://localhost:3000/api/laporan?status=baharu&had=2"     # petik URL yang ada &
 
-$badan = @{ tajuk = 'Ujian curl — longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
+$badan = @{ tajuk = 'Ujian curl - longkang tersumbat'; kategori = 'infrastruktur'; lat = 2.93; lng = 101.69 } | ConvertTo-Json -Depth 10
 $r = Invoke-WebRequest -UseBasicParsing -Method Post -Uri http://localhost:3000/api/laporan `
   -Headers @{ 'X-API-Key' = 'latihan-pgn-2026' } `
   -ContentType 'application/json; charset=utf-8' -Body $badan
