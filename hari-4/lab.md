@@ -6,6 +6,16 @@
 
 > 🪟 **Pengguna Windows:** jalankan arahan terminal dalam **Git Bash** (terminal lalai VS Code — lihat [persediaan §2.5](../docs/persediaan.md#25-terminal-vs-code-di-windows--git-bash)). Arahan PowerShell disediakan untuk langkah utama.
 
+> 🗺️ **Folder hari ini — jangan keliru:**
+>
+> | Folder | Jenis | Digunakan di |
+> |---|---|---|
+> | `~/latihan-npm` | Latihan sekali guna (npm) | Lab 4.1 langkah 1–6 |
+> | `~/demo-vite` | Latihan sekali guna (Vite), **bukan GeoLapor** | Lab 4.2 Bahagian A |
+> | `projek/geolapor-mula` | **Projek sebenar GeoLapor**, disimpan hingga Hari 5 | Lab 4.1 langkah 7 (pasang sahaja), Lab 4.2 Bahagian B–D, Lab 4.3, Lab 4.4, Hari 5 |
+>
+> Urutan hari ini: belajar setiap alat pada folder latihan dahulu, kemudian gunakannya pada GeoLapor.
+
 | Lab | Sesi | Folder | Hasil |
 |-----|------|--------|-------|
 | 4.1 | S1 9.00–11.00 | `~/latihan-npm/` + `projek/geolapor-mula` | npm init/install/semver/lockfile/scripts; `npm run periksa`; pakej GeoLapor dipasang |
@@ -156,6 +166,8 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
 
 7. **Pakej GeoLapor:**
 
+   > 📁 **Tukar folder:** dari `~/latihan-npm` ke **projek sebenar** `projek/geolapor-mula` (aplikasi yang anda bina hingga Hari 5). Sekarang **pasang sahaja** dan kenali pakejnya. Pembinaan bermula di **Lab 4.2 Bahagian B**, selepas demo Vite.
+
    ```bash
    cd <repo>/projek/geolapor-mula
    npm install                   # (atau npm ci — lockfile disediakan)
@@ -217,6 +229,8 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
 - Kod Hari 1–3 anda (atau `projek/latihan/hari-1/utils/geo.js` & `projek/latihan/hari-3/services/api.js` yang telah anda siapkan)
 
 ### Bahagian A — Demo Vite (±25 minit)
+
+> 📁 **Folder:** `~/demo-vite`, projek latihan **sekali guna, bukan GeoLapor**. Kenali Vite pada projek kosong dahulu; GeoLapor tidak disentuh dalam Bahagian A.
 
 1. Cipta projek (versi **dipin**, rujuk README §1.4):
 
@@ -294,6 +308,8 @@ Menggunakan `npm init`, `install` (`-D`), semver, lockfile (`npm ci`), `scripts`
 7. Buka `dist/assets/index-*.js` dan cari (Ctrl+F) `localhost:3000`. Nilai `VITE_*` ada dalam teks biasa, jadi ia **tidak rahsia**.
 
 ### Bahagian B — Pindah GeoLapor ke Vite (±50 minit)
+
+> 📁 **Kembali ke projek sebenar:** `projek/geolapor-mula` (yang dipasang di Lab 4.1 langkah 7). Mulai sini, semua kerja Hari 4 (Lab 4.2 Bahagian B–D, Lab 4.3, Lab 4.4) dan Hari 5 dibuat dalam folder ini. `~/demo-vite` dan `~/latihan-npm` boleh dibuang.
 
 8. Sediakan projek:
 
@@ -1325,6 +1341,8 @@ Melaksanakan `services/cache.js` (localStorage + IndexedDB), menyimpan penapis &
 - README §S4
 
 ### Langkah
+
+> 📁 **Folder:** `projek/geolapor-mula`, sama seperti Lab 4.2 Bahagian B dan Lab 4.3.
 
 1. **Terokai di Console (10 minit):**
 
